@@ -1,4 +1,6 @@
+Button
+ColorRect
+Label
 CollisionShape2D
 Area2D
-ColorRect
 CharacterBody2D

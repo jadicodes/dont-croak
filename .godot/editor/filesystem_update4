@@ -4,3 +4,7 @@ res://frog/frog.gd
 res://car/car.tscn
 res://bad_car/bad_car.gd
 res://bad_car/bad_car.tscn
+res://car/car.gd
+res://UI/control.tscn
+res://UI/end_screen.tscn
+res://UI/end_screen.gd

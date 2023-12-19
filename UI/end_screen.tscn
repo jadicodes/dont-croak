@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://btej4eay0l5pn"]
+
+[ext_resource type="Script" path="res://UI/end_screen.gd" id="1_pfb1q"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pfb1q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+color = Color(1, 1, 0.301961, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 85.0
+offset_right = 406.0
+offset_bottom = 111.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Get rekt"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 571.0
+offset_top = 371.0
+offset_right = 715.0
+offset_bottom = 402.0
+text = "Retry?"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

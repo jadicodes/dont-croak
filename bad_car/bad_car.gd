@@ -12,3 +12,4 @@ func _physics_process(_delta):
 	var collided := move_and_slide()
 	if collided:
 		velocity.y *= -1
+

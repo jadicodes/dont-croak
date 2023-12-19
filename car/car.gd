@@ -19,3 +19,14 @@ func _physics_process(delta):
 	direction = direction.normalized()
 
 	move_and_collide(direction * SPEED * delta)
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("deadly_obstacles"):
+		kill()
+
+
+func kill():
+	queue_free()
+	#do end_screen please
+	get_tree().change_scene_to_file("res://UI/end_screen.tscn")
