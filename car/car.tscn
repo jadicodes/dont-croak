@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxhow"]
 size = Vector2(40, 40)
 
-[node name="Car" type="CharacterBody2D"]
+[node name="Car" type="CharacterBody2D" groups=["car"]]
 motion_mode = 1
 script = ExtResource("1_tyoj3")
 

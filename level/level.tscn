@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=5 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
 [ext_resource type="PackedScene" uid="uid://wllclrevx5ek" path="res://car/car.tscn" id="1_pc3bg"]
+[ext_resource type="PackedScene" uid="uid://cckq3nbw3c31m" path="res://bad_car/bad_car.tscn" id="3_hbyjk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
 size = Vector2(1151, 13)
@@ -14,10 +15,10 @@ offset_bottom = 654.0
 color = Color(0.396078, 1, 0.419608, 1)
 
 [node name="Frog" parent="." instance=ExtResource("1_o6egk")]
-position = Vector2(40, 242)
+position = Vector2(149, 206)
 
 [node name="Car" parent="." instance=ExtResource("1_pc3bg")]
-position = Vector2(40, 242)
+position = Vector2(29, 310)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(575, 640)
@@ -28,3 +29,9 @@ shape = SubResource("RectangleShape2D_hgmbe")
 
 [node name="WallBottom" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_hgmbe")
+
+[node name="Frog2" parent="." instance=ExtResource("1_o6egk")]
+position = Vector2(345, 311)
+
+[node name="BadCar" parent="." instance=ExtResource("3_hbyjk")]
+position = Vector2(476, 190)

@@ -1,3 +1,6 @@
 res://level/level.tscn
 res://frog/frog.tscn
 res://frog/frog.gd
+res://car/car.tscn
+res://bad_car/bad_car.gd
+res://bad_car/bad_car.tscn
