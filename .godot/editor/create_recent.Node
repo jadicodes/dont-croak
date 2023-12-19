@@ -1,7 +1,7 @@
+Label
 CollisionShape2D
 ColorRect
 StaticBody2D
 CharacterBody2D
 Button
-Label
 Area2D

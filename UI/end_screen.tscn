@@ -17,7 +17,7 @@ offset_right = 1152.0
 offset_bottom = 647.0
 color = Color(1, 1, 0.301961, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="LoseGameLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 343.0
 offset_top = 85.0
@@ -33,5 +33,13 @@ offset_top = 371.0
 offset_right = 715.0
 offset_bottom = 402.0
 text = "Retry?"
+
+[node name="WinGameLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Congrats! You Win!"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
