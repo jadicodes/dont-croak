@@ -1,12 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cw2qxxtqkwax5"]
-
-[ext_resource type="Script" path="res://tree/tree.gd" id="1_biocb"]
+[gd_scene load_steps=2 format=3 uid="uid://cw2qxxtqkwax5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x6ehl"]
 size = Vector2(42, 42)
 
 [node name="Tree" type="StaticBody2D" groups=["deadly_obstacles"]]
-script = ExtResource("1_biocb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 40.0

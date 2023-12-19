@@ -8,3 +8,5 @@ res://frog/frog.gd
 res://tree/tree.gd
 res://car/car.gd
 res://level/level.gd
+res://UI/end_screen.gd
+res://common/win_or_lose.gd
