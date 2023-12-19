@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+@onready var squish := $SquishSound
 const SPEED = 300.0
 
 
@@ -20,4 +20,7 @@ func _on_area_2d_body_entered(body):
 
 
 func kill():
+	squish.play()
+	$ColorRect.visible = false
+	await squish.finished
 	queue_free()
