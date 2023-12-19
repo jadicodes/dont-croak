@@ -14,10 +14,10 @@ func _physics_process(_delta):
 		velocity.y *= -1
 
 
-func kill():
-	queue_free()
-
-
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("car"):
 		kill()
+
+
+func kill():
+	queue_free()
