@@ -8,3 +8,4 @@ res://car/car.gd
 res://UI/control.tscn
 res://UI/end_screen.tscn
 res://UI/end_screen.gd
+res://tree/tree.tscn
