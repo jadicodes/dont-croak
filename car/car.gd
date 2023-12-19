@@ -24,8 +24,7 @@ func _physics_process(delta):
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("deadly_obstacles"):
 		kill()
-	if body.is_in_group("end_of_level"):
-		win()
+	
 
 
 func kill():
@@ -34,5 +33,3 @@ func kill():
 	get_tree().change_scene_to_file("res://UI/end_screen.tscn")
 	
 
-func win():
-	get_tree().change_scene_to_file("res://UI/end_screen.tscn")

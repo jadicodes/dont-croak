@@ -1,3 +1,4 @@
+Area2D
 AudioStreamPlayer2D
 StaticBody2D
 Label
@@ -5,4 +6,3 @@ CollisionShape2D
 ColorRect
 CharacterBody2D
 Button
-Area2D
