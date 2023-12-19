@@ -21,6 +21,7 @@ func _on_area_2d_body_entered(body):
 
 func kill():
 	squish.play()
+	$CollisionShape2D.set_deferred("disabled", true)
 	$ColorRect.visible = false
 	await squish.finished
 	queue_free()

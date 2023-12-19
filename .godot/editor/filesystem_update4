@@ -6,3 +6,4 @@ res://UI/end_screen.tscn
 res://tree/tree.tscn
 res://frog/frog.gd
 res://tree/tree.gd
+res://car/car.gd
