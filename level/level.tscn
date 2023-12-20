@@ -1,10 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=20 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
 [ext_resource type="PackedScene" uid="uid://wllclrevx5ek" path="res://car/car.tscn" id="1_pc3bg"]
 [ext_resource type="Texture2D" uid="uid://cp4ruxpi8okca" path="res://raw_assets/Highway1.png" id="2_kv6io"]
-[ext_resource type="PackedScene" uid="uid://cckq3nbw3c31m" path="res://bad_car/bad_car.tscn" id="3_hbyjk"]
+[ext_resource type="PackedScene" uid="uid://cckq3nbw3c31m" path="res://deadly_cars/bad_car/bad_car.tscn" id="3_hbyjk"]
 [ext_resource type="Texture2D" uid="uid://bftjek7ru1kbb" path="res://raw_assets/highway2.png" id="3_nuyvn"]
 [ext_resource type="PackedScene" uid="uid://cw2qxxtqkwax5" path="res://tree/tree.tscn" id="4_8gpkm"]
 [ext_resource type="Texture2D" uid="uid://b5x3i7xpo1kf7" path="res://raw_assets/highwaytrans1.png" id="4_do2aq"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cb7fa3oevm163" path="res://Barrier/barrier.tscn" id="12_m7th1"]
 [ext_resource type="Texture2D" uid="uid://dpfncc7iv4ggd" path="res://raw_assets/highway3.png" id="13_qayd6"]
 [ext_resource type="PackedScene" uid="uid://dj7amho17wutp" path="res://turtle/turtle.tscn" id="15_6y8l0"]
+[ext_resource type="PackedScene" uid="uid://bxc4ayyfikt1j" path="res://police_car/police_car.tscn" id="16_f5hir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
 size = Vector2(593, 28.25)
@@ -168,5 +169,8 @@ shape = SubResource("RectangleShape2D_8tjnj")
 
 [node name="Turtle" parent="." instance=ExtResource("15_6y8l0")]
 position = Vector2(143, 127)
+
+[node name="PoliceCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("16_f5hir")]
+position = Vector2(1164, 87)
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]

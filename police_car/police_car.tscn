@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxc4ayyfikt1j"]
+
+[ext_resource type="Texture2D" uid="uid://dsihcialdyw8k" path="res://raw_assets/car5.png" id="1_i3r4b"]
+[ext_resource type="Script" path="res://police_car/police_car.gd" id="1_lvvfx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qc57h"]
+size = Vector2(32, 16)
+
+[node name="PoliceCar" type="CharacterBody2D"]
+script = ExtResource("1_lvvfx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 8)
+shape = SubResource("RectangleShape2D_qc57h")
+
+[node name="PoliceCarSprite" type="Sprite2D" parent="."]
+position = Vector2(16, 8)
+rotation = 1.5708
+texture = ExtResource("1_i3r4b")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(16, 8)
+rotation = 1.5708
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

@@ -1,3 +1,8 @@
 res://UI/start_screen.tscn
 res://theme.tres
 res://UI/croak.gdshader
+res://level/level.tscn
+res://police_car/police_car.tscn
+res://police_car/police_car.gd
+res://common/sfx.tscn
+res://common/sfx.gd
