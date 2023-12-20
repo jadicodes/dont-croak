@@ -20,3 +20,5 @@ res://Barrier/barrier.tscn
 res://turtle/turtle.gd
 res://turtle/turtle.tscn
 res://turtle/turt.tscn
+res://UI/croak.gdshader
+res://UI/start_screen.gd
