@@ -1,10 +1,10 @@
 res://level/level.tscn
+res://theme.tres
 res://frog/frog.tscn
 res://bad_car/bad_car.tscn
 res://car/car.tscn
 res://UI/end_screen.tscn
 res://tree/tree.tscn
-res://bad_car/bad_car.gd
-res://car/car.gd
-res://level/level.gd
-res://frog/frog.gd
+res://UI/start_screen.tscn
+res://UI/start_screen.gd
+res://UI/end_screen.gd

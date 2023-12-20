@@ -1,11 +1,12 @@
-Camera2D
+Label
+CanvasLayer
 TextureButton
+Button
+ColorRect
+Camera2D
 CollisionShape2D
 Area2D
 Sprite2D
 AudioStreamPlayer2D
 StaticBody2D
-Label
-ColorRect
 CharacterBody2D
-Button

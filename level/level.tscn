@@ -41,7 +41,7 @@ position = Vector2(-416, -459)
 shape = SubResource("RectangleShape2D_hgmbe")
 
 [node name="BadCar" parent="." instance=ExtResource("3_hbyjk")]
-position = Vector2(176, 70)
+position = Vector2(180, 62)
 
 [node name="BadCar2" parent="." instance=ExtResource("3_hbyjk")]
 position = Vector2(203, 147)

@@ -1,20 +1,17 @@
 extends Control
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if WinOrLose.win == true:
-		$LoseGameLabel.hide()
-		$WinGameLabel.show()
+		$WinLoseLabel.text = "You win!"
 	else:
-		$LoseGameLabel.show()
-		$WinGameLabel.hide()
+		$WinLoseLabel.text = "Get rekt"
 
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://level/level.tscn")
 
+
+
+func _on_main_menu_button_pressed():
+	get_tree().change_scene_to_file("res://UI/start_screen.tscn")

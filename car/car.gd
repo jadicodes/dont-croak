@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
 
-const SPEED = 175.0
+const SPEED = 100.0
 
 
 func _physics_process(delta):
 
-	var direction := Vector2(0.50,0)
+	var direction := Vector2(1,0)
 	
 	if Input.is_action_pressed("move_up"):
 		direction.y -= 1
