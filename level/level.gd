@@ -5,10 +5,6 @@ func _ready():
 	WinOrLose.win = false
 
 
-func _process(_delta):
-	pass
-
-
 func _on_win_zone_body_entered(body):
 	if body.is_in_group("car"):
 		set_win()

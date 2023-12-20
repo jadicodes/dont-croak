@@ -1,14 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=10 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
 [ext_resource type="PackedScene" uid="uid://wllclrevx5ek" path="res://car/car.tscn" id="1_pc3bg"]
 [ext_resource type="Texture2D" uid="uid://cp4ruxpi8okca" path="res://raw_assets/Highway1.png" id="2_kv6io"]
 [ext_resource type="PackedScene" uid="uid://cckq3nbw3c31m" path="res://bad_car/bad_car.tscn" id="3_hbyjk"]
+[ext_resource type="Texture2D" uid="uid://bftjek7ru1kbb" path="res://raw_assets/highway2.png" id="3_nuyvn"]
 [ext_resource type="PackedScene" uid="uid://cw2qxxtqkwax5" path="res://tree/tree.tscn" id="4_8gpkm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
-size = Vector2(318, 6.5)
+size = Vector2(570.125, 6.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tjnj"]
 size = Vector2(5.25, 185)
@@ -16,13 +17,18 @@ size = Vector2(5.25, 185)
 [node name="Level" type="Node2D"]
 script = ExtResource("1_8lcnu")
 
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
 [node name="Highway" type="Sprite2D" parent="."]
 position = Vector2(160, 90)
 texture = ExtResource("2_kv6io")
 
-[node name="Highway1" type="Sprite2D" parent="."]
-position = Vector2(479, 90)
-texture = ExtResource("2_kv6io")
+[node name="Highway2" type="Sprite2D" parent="."]
+position = Vector2(640, 90)
+texture = ExtResource("3_nuyvn")
 
 [node name="Frog" parent="." instance=ExtResource("1_o6egk")]
 position = Vector2(66, 41)
@@ -37,18 +43,26 @@ position = Vector2(2, 115)
 position = Vector2(575, 640)
 
 [node name="WallTopRoadTop" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
-position = Vector2(-415, -625)
+position = Vector2(-278.375, -626)
 shape = SubResource("RectangleShape2D_hgmbe")
 
 [node name="WallBottomRoadBottom" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
-position = Vector2(-415, -473)
+position = Vector2(-266.063, -473)
+shape = SubResource("RectangleShape2D_hgmbe")
+
+[node name="WallBottomRoadBottom2" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
+position = Vector2(58, -427)
+shape = SubResource("RectangleShape2D_hgmbe")
+
+[node name="WallBottomRoadBottom3" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
+position = Vector2(56, -678)
 shape = SubResource("RectangleShape2D_hgmbe")
 
 [node name="BadCar" parent="." instance=ExtResource("3_hbyjk")]
-position = Vector2(180, 43)
+position = Vector2(601, -26)
 
 [node name="BadCar2" parent="." instance=ExtResource("3_hbyjk")]
-position = Vector2(203, 147)
+position = Vector2(663, 81)
 collision_mask = 15
 
 [node name="Tree" parent="." instance=ExtResource("4_8gpkm")]
@@ -58,7 +72,7 @@ position = Vector2(247, 90)
 position = Vector2(91, 68)
 
 [node name="Tree3" parent="." instance=ExtResource("4_8gpkm")]
-position = Vector2(268, 70)
+position = Vector2(329, 90)
 
 [node name="Tree4" parent="." instance=ExtResource("4_8gpkm")]
 position = Vector2(143, 68)
@@ -67,12 +81,12 @@ position = Vector2(143, 68)
 position = Vector2(143, 91)
 
 [node name="Tree6" parent="." instance=ExtResource("4_8gpkm")]
-position = Vector2(297, 67)
+position = Vector2(329, 69)
 
 [node name="WinZone" type="Area2D" parent="."]
 
 [node name="WallRight" type="CollisionShape2D" parent="WinZone" groups=["end_of_level"]]
-position = Vector2(636, 89)
+position = Vector2(957, 87)
 shape = SubResource("RectangleShape2D_8tjnj")
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]
