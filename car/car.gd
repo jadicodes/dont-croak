@@ -8,7 +8,7 @@ var can_move = false
 func _physics_process(delta):
 	var direction := Vector2(0,0)
 	if can_move == true:
-		animation_player.stop()
+		animation_player.play("shake")
 		direction = Vector2(1,0)
 		
 		if Input.is_action_pressed("move_up"):

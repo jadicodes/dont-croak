@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://dj7amho17wutp"]
+
+[ext_resource type="Script" path="res://turtle/turtle.gd" id="1_6kxhc"]
+[ext_resource type="Texture2D" uid="uid://dlcddc0xvffmg" path="res://raw_assets/turtle1.png" id="1_sb7vf"]
+[ext_resource type="PackedScene" uid="uid://bwvmov62y5hi0" path="res://common/splat.tscn" id="3_2o4wu"]
+[ext_resource type="AudioStream" uid="uid://bvredwindhet0" path="res://raw_assets/squish.wav" id="4_r30xw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibb3o"]
+size = Vector2(14, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h03dd"]
+size = Vector2(16, 18)
+
+[node name="Turtle" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_6kxhc")
+
+[node name="SpriteTurtle" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("1_sb7vf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_ibb3o")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_h03dd")
+
+[node name="Splat" parent="." instance=ExtResource("3_2o4wu")]
+position = Vector2(8, 8)
+
+[node name="SquishSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_r30xw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

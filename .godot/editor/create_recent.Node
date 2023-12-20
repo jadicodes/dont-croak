@@ -1,11 +1,12 @@
 CollisionShape2D
-AnimationPlayer
-Timer
-AudioStreamPlayer
-CPUParticles2D
 Area2D
 Sprite2D
+AudioStreamPlayer
 CharacterBody2D
+StaticBody2D
+AnimationPlayer
+Timer
+CPUParticles2D
 AudioStreamPlayer3D
 AudioStreamPlayer2D
 Label
@@ -14,4 +15,3 @@ TextureButton
 Button
 ColorRect
 Camera2D
-StaticBody2D

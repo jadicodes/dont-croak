@@ -1,9 +1,11 @@
 extends Control
 @onready var crash := $CrashSound
+@onready var win := $WinSound
 
 
 func _ready():
 	if WinOrLose.win == true:
+		win.play()
 		$WinLoseLabel.text = "You win!"
 	else:
 		crash.play()

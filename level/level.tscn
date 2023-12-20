@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=19 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
@@ -8,15 +8,19 @@
 [ext_resource type="Texture2D" uid="uid://bftjek7ru1kbb" path="res://raw_assets/highway2.png" id="3_nuyvn"]
 [ext_resource type="PackedScene" uid="uid://cw2qxxtqkwax5" path="res://tree/tree.tscn" id="4_8gpkm"]
 [ext_resource type="Texture2D" uid="uid://b5x3i7xpo1kf7" path="res://raw_assets/highwaytrans1.png" id="4_do2aq"]
+[ext_resource type="Texture2D" uid="uid://dq0xlhlp4kpgb" path="res://raw_assets/highwaytrans2.png" id="6_21hw7"]
 [ext_resource type="PackedScene" uid="uid://bd5vcwaesqoo0" path="res://horizontal_bad_car/horizontal_bad_car.tscn" id="8_lhnrb"]
 [ext_resource type="AudioStream" uid="uid://bxvpqwo3adcue" path="res://raw_assets/FrogBoppler.ogg" id="9_11p2h"]
 [ext_resource type="PackedScene" uid="uid://p8b87vt087n5" path="res://long_car/long_car.tscn" id="10_u5stc"]
+[ext_resource type="PackedScene" uid="uid://cb7fa3oevm163" path="res://Barrier/barrier.tscn" id="12_m7th1"]
+[ext_resource type="Texture2D" uid="uid://dpfncc7iv4ggd" path="res://raw_assets/highway3.png" id="13_qayd6"]
+[ext_resource type="PackedScene" uid="uid://dj7amho17wutp" path="res://turtle/turtle.tscn" id="15_6y8l0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
 size = Vector2(593, 28.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kimnb"]
-size = Vector2(467, 29)
+size = Vector2(713.914, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tjnj"]
 size = Vector2(5.25, 185)
@@ -37,9 +41,17 @@ texture = ExtResource("2_kv6io")
 position = Vector2(640, 90)
 texture = ExtResource("3_nuyvn")
 
-[node name="Highwaytrans1" type="Sprite2D" parent="."]
+[node name="HighwayTrans1" type="Sprite2D" parent="."]
 position = Vector2(1268, 90)
 texture = ExtResource("4_do2aq")
+
+[node name="Highway3" type="Sprite2D" parent="."]
+position = Vector2(1835, 89)
+texture = ExtResource("13_qayd6")
+
+[node name="HighwayTrans2" type="Sprite2D" parent="."]
+position = Vector2(2468, 89)
+texture = ExtResource("6_21hw7")
 
 [node name="Frog" parent="." instance=ExtResource("1_o6egk")]
 position = Vector2(66, 41)
@@ -63,11 +75,11 @@ position = Vector2(2, 115)
 position = Vector2(575, 640)
 
 [node name="WallTopRoadTop" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
-position = Vector2(-278, -638)
+position = Vector2(-279, -653)
 shape = SubResource("RectangleShape2D_hgmbe")
 
 [node name="WallBottomRoadBottom" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
-position = Vector2(-277.5, -462.125)
+position = Vector2(-278, -447)
 shape = SubResource("RectangleShape2D_hgmbe")
 
 [node name="WallBottomRoadBottom2" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
@@ -79,19 +91,27 @@ position = Vector2(56, -667)
 shape = SubResource("RectangleShape2D_hgmbe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(345.5, -461.5)
+position = Vector2(346, -447)
 shape = SubResource("RectangleShape2D_kimnb")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(345, -637)
+position = Vector2(345, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(794, -653)
+position = Vector2(1059, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(791, -445)
+position = Vector2(1059, -447)
+shape = SubResource("RectangleShape2D_kimnb")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1773, -447)
+shape = SubResource("RectangleShape2D_kimnb")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1773, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
 [node name="BadCar" parent="." instance=ExtResource("3_hbyjk")]
@@ -138,10 +158,16 @@ position = Vector2(893, 45)
 [node name="LongCar" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
 position = Vector2(-97, 144)
 
+[node name="Barrier" parent="." groups=["deadly_obstacles"] instance=ExtResource("12_m7th1")]
+position = Vector2(1155, 64)
+
 [node name="WinZone" type="Area2D" parent="."]
 
 [node name="WinCollision" type="CollisionShape2D" parent="WinZone" groups=["end_of_level"]]
-position = Vector2(1519, 89)
+position = Vector2(2731, 88)
 shape = SubResource("RectangleShape2D_8tjnj")
+
+[node name="Turtle" parent="." instance=ExtResource("15_6y8l0")]
+position = Vector2(143, 127)
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]

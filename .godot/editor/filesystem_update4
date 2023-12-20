@@ -16,3 +16,6 @@ res://long_car/long_car.gd
 res://bad_car/bad_car.gd
 res://common/splat.tscn
 res://car/CarSprite.gd
+res://Barrier/barrier.tscn
+res://turtle/turtle.gd
+res://turtle/turtle.tscn
