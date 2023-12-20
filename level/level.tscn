@@ -23,6 +23,9 @@ color = Color(0.396078, 1, 0.419608, 1)
 [node name="Frog" parent="." instance=ExtResource("1_o6egk")]
 position = Vector2(66, 41)
 
+[node name="Frog2" parent="." instance=ExtResource("1_o6egk")]
+position = Vector2(112, 94)
+
 [node name="Car" parent="." instance=ExtResource("1_pc3bg")]
 position = Vector2(5, 77)
 
@@ -37,24 +40,21 @@ shape = SubResource("RectangleShape2D_hgmbe")
 position = Vector2(-416, -459)
 shape = SubResource("RectangleShape2D_hgmbe")
 
-[node name="Frog2" parent="." instance=ExtResource("1_o6egk")]
-position = Vector2(112, 94)
-
 [node name="BadCar" parent="." instance=ExtResource("3_hbyjk")]
 position = Vector2(176, 70)
-
-[node name="Tree" parent="." instance=ExtResource("4_8gpkm")]
-position = Vector2(236, 113)
 
 [node name="BadCar2" parent="." instance=ExtResource("3_hbyjk")]
 position = Vector2(203, 147)
 collision_mask = 15
 
+[node name="Tree" parent="." instance=ExtResource("4_8gpkm")]
+position = Vector2(236, 113)
+
 [node name="Tree2" parent="." instance=ExtResource("4_8gpkm")]
-position = Vector2(159, 147)
+position = Vector2(155, 159)
 
 [node name="Tree3" parent="." instance=ExtResource("4_8gpkm")]
-position = Vector2(159, 122)
+position = Vector2(159, 137)
 
 [node name="Tree4" parent="." instance=ExtResource("4_8gpkm")]
 position = Vector2(157, 59)
@@ -65,10 +65,10 @@ position = Vector2(156, 15)
 [node name="Tree6" parent="." instance=ExtResource("4_8gpkm")]
 position = Vector2(236, 89)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="WinZone" type="Area2D" parent="."]
 
-[node name="WallRight" type="CollisionShape2D" parent="Area2D" groups=["end_of_level"]]
+[node name="WallRight" type="CollisionShape2D" parent="WinZone" groups=["end_of_level"]]
 position = Vector2(319.375, 91.5)
 shape = SubResource("RectangleShape2D_8tjnj")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]

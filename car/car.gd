@@ -6,14 +6,12 @@ const SPEED = 175.0
 
 func _physics_process(delta):
 
-	var direction := Vector2(0,0)
+	var direction := Vector2(0.15,0)
 	
 	if Input.is_action_pressed("move_up"):
 		direction.y -= 1
 	if Input.is_action_pressed("move_down"):
 		direction.y += 1
-	if Input.is_action_pressed("move_right"):
-		direction.x += 1
 		
 		
 	direction = direction.normalized()
@@ -24,11 +22,9 @@ func _physics_process(delta):
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("deadly_obstacles"):
 		die()
-	
 
 
 func die():
-	queue_free()
 	get_tree().change_scene_to_file("res://UI/end_screen.tscn")
 	
 

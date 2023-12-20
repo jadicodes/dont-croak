@@ -10,9 +10,10 @@ func _process(_delta):
 	pass
 
 
-func _on_area_2d_body_entered(body):
+func _on_win_zone_body_entered(body):
 	if body.is_in_group("car"):
 		set_win()
+
 
 func set_win():
 	WinOrLose.swap()
