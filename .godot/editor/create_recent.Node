@@ -1,8 +1,8 @@
+CharacterBody2D
 CollisionShape2D
 Area2D
 Sprite2D
 AudioStreamPlayer
-CharacterBody2D
 StaticBody2D
 AnimationPlayer
 Timer

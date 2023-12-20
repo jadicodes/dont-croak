@@ -8,7 +8,7 @@ size = Vector2(14, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m4hc7"]
 size = Vector2(16, 13)
 
-[node name="Turt" type="Node2D"]
+[node name="Turt" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8, 8)
