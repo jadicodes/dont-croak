@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cckq3nbw3c31m"]
+[gd_scene load_steps=6 format=3 uid="uid://cckq3nbw3c31m"]
 
 [ext_resource type="Script" path="res://bad_car/bad_car.gd" id="1_qhi4n"]
 [ext_resource type="Texture2D" uid="uid://qjs4rayke5lh" path="res://raw_assets/car3.png" id="2_ym6p2"]
+[ext_resource type="AudioStream" uid="uid://ollbc5gdjjks" path="res://raw_assets/crash.wav" id="3_dbllb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbotj"]
 size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xw2uv"]
+size = Vector2(18, 18)
 
 [node name="BadCar" type="CharacterBody2D" groups=["deadly_obstacles"]]
 motion_mode = 1
@@ -18,3 +22,14 @@ shape = SubResource("RectangleShape2D_bbotj")
 [node name="SpriteBadCar" type="Sprite2D" parent="."]
 position = Vector2(8, 8)
 texture = ExtResource("2_ym6p2")
+
+[node name="CrashSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dbllb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_xw2uv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

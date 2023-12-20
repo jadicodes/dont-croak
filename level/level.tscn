@@ -106,7 +106,7 @@ position = Vector2(390, 21)
 [node name="HorizontalBadCar2" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
 position = Vector2(893, 45)
 
-[node name="LongCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("10_u5stc")]
+[node name="LongCar" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
 position = Vector2(24, 144)
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]

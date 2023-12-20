@@ -9,5 +9,6 @@ func _ready():
 
 
 func _physics_process(_delta):
-	print(velocity)
 	move_and_slide()
+
+

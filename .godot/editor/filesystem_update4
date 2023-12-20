@@ -13,3 +13,4 @@ res://car/car.gd
 res://UI/end_screen.gd
 res://long_car/long_car.tscn
 res://long_car/long_car.gd
+res://bad_car/bad_car.gd
