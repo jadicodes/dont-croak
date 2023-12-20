@@ -11,3 +11,5 @@ res://horizontal_bad_car/horizontal_bad_car.gd
 res://frog/frog.gd
 res://car/car.gd
 res://UI/end_screen.gd
+res://long_car/long_car.tscn
+res://long_car/long_car.gd

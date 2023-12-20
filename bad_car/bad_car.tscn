@@ -8,6 +8,7 @@ size = Vector2(16, 16)
 
 [node name="BadCar" type="CharacterBody2D" groups=["deadly_obstacles"]]
 motion_mode = 1
+safe_margin = 0.001
 script = ExtResource("1_qhi4n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

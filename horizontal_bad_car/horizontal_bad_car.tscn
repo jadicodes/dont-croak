@@ -7,6 +7,7 @@
 size = Vector2(16, 16)
 
 [node name="HorizontalBadCar" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_mk6ca")
 
 [node name="SpriteHorizontalBadCar" type="Sprite2D" parent="."]

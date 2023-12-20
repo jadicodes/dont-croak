@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=13 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cw2qxxtqkwax5" path="res://tree/tree.tscn" id="4_8gpkm"]
 [ext_resource type="PackedScene" uid="uid://bd5vcwaesqoo0" path="res://horizontal_bad_car/horizontal_bad_car.tscn" id="8_lhnrb"]
 [ext_resource type="AudioStream" uid="uid://bxvpqwo3adcue" path="res://raw_assets/FrogBoppler.ogg" id="9_11p2h"]
+[ext_resource type="PackedScene" uid="uid://p8b87vt087n5" path="res://long_car/long_car.tscn" id="10_u5stc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
 size = Vector2(570.125, 6.5)
@@ -104,5 +105,8 @@ position = Vector2(390, 21)
 
 [node name="HorizontalBadCar2" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
 position = Vector2(893, 45)
+
+[node name="LongCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("10_u5stc")]
+position = Vector2(24, 144)
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]
