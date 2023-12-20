@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var squish := $SquishSound
 @onready var sprite_frog := $SpriteFrog
-const SPEED = 75.0
+const SPEED = 65.0
 
 
 func _ready():
@@ -24,6 +24,6 @@ func _on_area_2d_body_entered(body):
 func die():
 	squish.play()
 	$CollisionShape2D.set_deferred("disabled", true)
-	$Sprite2D.visible = false
+	sprite_frog.visible = false
 	await squish.finished
 	queue_free()
