@@ -14,6 +14,6 @@ script = ExtResource("1_qhi4n")
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_bbotj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="SpriteBadCar" type="Sprite2D" parent="."]
 position = Vector2(8, 8)
 texture = ExtResource("2_ym6p2")
