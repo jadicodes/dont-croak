@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://btej4eay0l5pn"]
+[gd_scene load_steps=6 format=3 uid="uid://btej4eay0l5pn"]
 
 [ext_resource type="Script" path="res://UI/end_screen.gd" id="1_pfb1q"]
 [ext_resource type="Theme" uid="uid://bg2kortavqt36" path="res://theme.tres" id="2_o3k83"]
 [ext_resource type="Texture2D" uid="uid://c37tpepocswvk" path="res://raw_assets/Button1.png" id="4_dpxou"]
 [ext_resource type="Texture2D" uid="uid://cspntq2mpirwp" path="res://raw_assets/Button2.png" id="5_nph2o"]
+[ext_resource type="AudioStream" uid="uid://ollbc5gdjjks" path="res://raw_assets/crash.wav" id="5_rwiti"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -86,6 +87,9 @@ theme_override_font_sizes/font_size = 32
 text = "Main Menu"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CrashSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_rwiti")
 
 [connection signal="pressed" from="PlayAgainButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
