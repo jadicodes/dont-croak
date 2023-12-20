@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://wllclrevx5ek"]
+[gd_scene load_steps=6 format=3 uid="uid://wllclrevx5ek"]
 
 [ext_resource type="Script" path="res://car/car.gd" id="1_tyoj3"]
 [ext_resource type="Texture2D" uid="uid://ccidqx7bsrd6i" path="res://raw_assets/car1.png" id="2_w40pk"]
+[ext_resource type="AudioStream" uid="uid://cu1di0c4moh4p" path="res://raw_assets/car_start.wav" id="3_5dm5c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxhow"]
 size = Vector2(16, 16)
@@ -34,4 +35,14 @@ limit_left = 0
 limit_top = 0
 limit_bottom = -180
 
+[node name="CarStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5dm5c")
+autoplay = true
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

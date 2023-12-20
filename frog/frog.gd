@@ -24,8 +24,12 @@ func _on_area_2d_body_entered(body):
 
 
 func die():
+	$Splat.set_modulate(Color.RED)
+	$Splat.emitting = true
 	squish.play()
 	$CollisionShape2D.set_deferred("disabled", true)
 	sprite_frog.visible = false
 	await squish.finished
 	queue_free()
+	
+

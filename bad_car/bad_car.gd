@@ -21,6 +21,8 @@ func _on_area_2d_body_entered(body):
 
 
 func die():
+	$Splat.set_modulate(Color.BLUE)
+	$Splat.emitting = true
 	crash.play()
 	$CollisionShape2D.set_deferred("disabled", true)
 	bad_car_sprite.visible = false

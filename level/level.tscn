@@ -39,6 +39,9 @@ position = Vector2(66, 41)
 [node name="Frog2" parent="." instance=ExtResource("1_o6egk")]
 position = Vector2(112, 94)
 
+[node name="Frog3" parent="." instance=ExtResource("1_o6egk")]
+position = Vector2(284, 117)
+
 [node name="Car" parent="." instance=ExtResource("1_pc3bg")]
 position = Vector2(2, 115)
 
@@ -107,6 +110,6 @@ position = Vector2(390, 21)
 position = Vector2(893, 45)
 
 [node name="LongCar" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
-position = Vector2(24, 144)
+position = Vector2(-97, 144)
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]
