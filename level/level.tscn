@@ -127,7 +127,7 @@ position = Vector2(329, 69)
 position = Vector2(0, 8)
 stream = ExtResource("9_11p2h")
 autoplay = true
-attenuation = 0.00248938
+attenuation = 4.0268e-05
 
 [node name="HorizontalBadCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
 position = Vector2(390, 21)
