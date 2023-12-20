@@ -7,3 +7,5 @@ res://tree/tree.tscn
 res://UI/end_screen.tscn
 res://UI/start_screen.tscn
 res://horizontal_bad_car/horizontal_bad_car.tscn
+res://horizontal_bad_car/horizontal_bad_car.gd
+res://frog/frog.gd

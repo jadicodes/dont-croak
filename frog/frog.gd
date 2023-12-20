@@ -19,6 +19,8 @@ func _physics_process(_delta):
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("car"):
 		die()
+	if body.is_in_group("deadly_obstacles"):
+		die()
 
 
 func die():

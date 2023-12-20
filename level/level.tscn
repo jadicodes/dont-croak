@@ -95,11 +95,14 @@ position = Vector2(329, 69)
 position = Vector2(957, 87)
 shape = SubResource("RectangleShape2D_8tjnj")
 
-[node name="HorizontalBadCar" parent="WinZone/WinCollision" instance=ExtResource("8_lhnrb")]
-position = Vector2(-927, 55)
-
 [node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_11p2h")
 autoplay = true
+
+[node name="HorizontalBadCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(390, 21)
+
+[node name="HorizontalBadCar2" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(893, 45)
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]
