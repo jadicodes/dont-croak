@@ -1,15 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://cw2qxxtqkwax5"]
+[gd_scene load_steps=3 format=3 uid="uid://cw2qxxtqkwax5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6ehl"]
-size = Vector2(42, 42)
+[ext_resource type="Texture2D" uid="uid://c6m2lyrm40twd" path="res://raw_assets/tree1.png" id="1_frrlq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lj0x7"]
+radius = 7.0
 
 [node name="Tree" type="StaticBody2D" groups=["deadly_obstacles"]]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0.364706, 0.721569, 1, 1)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(8, 8)
+texture = ExtResource("1_frrlq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(20, 20)
-shape = SubResource("RectangleShape2D_x6ehl")
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_lj0x7")

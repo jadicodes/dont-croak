@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bg2kortavqt36"]
+
+[ext_resource type="FontFile" uid="uid://cqi6tk5d3lmwc" path="res://raw_assets/fonts/Minimal5x7.ttf" id="1_0bp3h"]
+
+[resource]
+default_font = ExtResource("1_0bp3h")
+default_font_size = 32

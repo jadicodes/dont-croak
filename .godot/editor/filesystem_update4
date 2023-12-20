@@ -4,9 +4,7 @@ res://bad_car/bad_car.tscn
 res://car/car.tscn
 res://UI/end_screen.tscn
 res://tree/tree.tscn
-res://frog/frog.gd
-res://tree/tree.gd
+res://bad_car/bad_car.gd
 res://car/car.gd
 res://level/level.gd
-res://UI/end_screen.gd
-res://common/win_or_lose.gd
+res://frog/frog.gd

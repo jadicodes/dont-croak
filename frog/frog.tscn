@@ -1,34 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://br25er0khgry7"]
+[gd_scene load_steps=6 format=3 uid="uid://br25er0khgry7"]
 
 [ext_resource type="Script" path="res://frog/frog.gd" id="1_sgaas"]
 [ext_resource type="AudioStream" uid="uid://bvredwindhet0" path="res://raw_assets/squish.wav" id="2_3dv3a"]
+[ext_resource type="Texture2D" uid="uid://b28uel0lcb63" path="res://raw_assets/frog1.png" id="3_lrqon"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bf0kr"]
-size = Vector2(39.5, 40)
+size = Vector2(16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s0une"]
-size = Vector2(46, 46)
+size = Vector2(18, 18)
 
 [node name="Frog" type="CharacterBody2D" groups=["safe_obstacles"]]
 motion_mode = 1
 script = ExtResource("1_sgaas")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(1, 0.231373, 1, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(20.25, 20)
+position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_bf0kr")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(20, 20)
+position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_s0une")
 
 [node name="SquishSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_3dv3a")
+
+[node name="SpriteFrog" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("3_lrqon")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

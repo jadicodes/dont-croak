@@ -1,29 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://wllclrevx5ek"]
+[gd_scene load_steps=5 format=3 uid="uid://wllclrevx5ek"]
 
 [ext_resource type="Script" path="res://car/car.gd" id="1_tyoj3"]
+[ext_resource type="Texture2D" uid="uid://ccidqx7bsrd6i" path="res://raw_assets/car1.png" id="2_w40pk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vxhow"]
-size = Vector2(40, 40)
+size = Vector2(16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61cdb"]
-size = Vector2(42, 42)
+size = Vector2(18, 18)
 
 [node name="Car" type="CharacterBody2D" groups=["car"]]
 motion_mode = 1
 script = ExtResource("1_tyoj3")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(20, 20)
+position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_vxhow")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(20, 20)
+position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_61cdb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+rotation = 1.5708
+texture = ExtResource("2_w40pk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(8, 8)
+limit_top = 0
+limit_bottom = -180
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
