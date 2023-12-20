@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://br25er0khgry7"]
+[gd_scene load_steps=7 format=3 uid="uid://br25er0khgry7"]
 
 [ext_resource type="Script" path="res://frog/frog.gd" id="1_sgaas"]
 [ext_resource type="Texture2D" uid="uid://b28uel0lcb63" path="res://raw_assets/frog1.png" id="3_lrqon"]
+[ext_resource type="PackedScene" uid="uid://cdn6g5k0xjis7" path="res://common/off_screen_notifier.tscn" id="4_fu26m"]
 [ext_resource type="PackedScene" uid="uid://bwvmov62y5hi0" path="res://common/splat.tscn" id="4_uvreq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bf0kr"]
@@ -30,5 +31,8 @@ texture = ExtResource("3_lrqon")
 
 [node name="Splat" parent="." instance=ExtResource("4_uvreq")]
 position = Vector2(8, 8)
+
+[node name="OffScreenNotifier" parent="." instance=ExtResource("4_fu26m")]
+position = Vector2(9, 9)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

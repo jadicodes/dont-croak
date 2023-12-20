@@ -29,4 +29,3 @@ func die():
 	SFX.play_crash()
 	$CollisionShape2D.set_deferred("disabled", true)
 	bad_car_sprite.visible = false
-	queue_free()

@@ -28,6 +28,4 @@ func die():
 	splat.emitting = true
 	SFX.play_squish()
 	$CollisionShape2D.set_deferred("disabled", true)
-	queue_free()
-	
-
+	sprite_frog.visible = false

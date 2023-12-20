@@ -31,8 +31,8 @@ func die():
 	SFX.play_squish()
 	$CollisionShape2D.set_deferred("disabled", true)
 	turtle_sprite.visible = false
-	var positionOfDeath = turtle_sprite.global_position
-	print(positionOfDeath)
+	var position_of_death = turtle_sprite.global_position
+	print(position_of_death)
 	queue_free()
 	
 
