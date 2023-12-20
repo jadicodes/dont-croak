@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
-@onready var squish := $SquishSound
+
 @onready var sprite_frog := $SpriteFrog
+@onready var splat := $Splat
 const SPEED = 65.0
 
 
@@ -17,19 +18,16 @@ func _physics_process(_delta):
 
 
 func _on_area_2d_body_entered(body):
-	if body.is_in_group("car"):
-		die()
-	if body.is_in_group("deadly_obstacles"):
+	if body.is_in_group("car") or body.is_in_group("deadly_obstacles"):
 		die()
 
 
+# frogs do not SPLAT
 func die():
-	$Splat.set_modulate(Color.RED)
-	$Splat.emitting = true
-	squish.play()
+	splat.set_modulate(Color.RED)
+	splat.emitting = true
+	SFX.play_squish()
 	$CollisionShape2D.set_deferred("disabled", true)
-	sprite_frog.visible = false
-	await squish.finished
 	queue_free()
 	
 

@@ -1,6 +1,8 @@
 extends CharacterBody2D
-@onready var crash = $CrashSound
+
+
 @onready var bad_car_sprite := $SpriteBadCar
+@onready var splat := $Splat
 const SPEED = 200.0
 
 
@@ -20,11 +22,11 @@ func _on_area_2d_body_entered(body):
 		die()
 
 
+# also not splatting
 func die():
-	$Splat.set_modulate(Color.BLUE)
-	$Splat.emitting = true
-	crash.play()
+	splat.set_modulate(Color.BLUE)
+	splat.emitting = true
+	SFX.play_crash()
 	$CollisionShape2D.set_deferred("disabled", true)
 	bad_car_sprite.visible = false
-	await crash.finished
 	queue_free()

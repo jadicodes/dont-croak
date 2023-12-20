@@ -71,6 +71,11 @@ position = Vector2(1279, 158)
 [node name="Car" parent="." instance=ExtResource("1_pc3bg")]
 position = Vector2(2, 115)
 
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="Car"]
+position = Vector2(-2, -107)
+stream = ExtResource("9_11p2h")
+autoplay = true
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(575, 640)
 
@@ -142,12 +147,6 @@ position = Vector2(143, 91)
 
 [node name="Tree6" parent="." instance=ExtResource("4_8gpkm")]
 position = Vector2(329, 69)
-
-[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(0, 8)
-stream = ExtResource("9_11p2h")
-autoplay = true
-attenuation = 4.0268e-05
 
 [node name="HorizontalBadCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
 position = Vector2(390, 21)

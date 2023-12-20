@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 @onready var h_bad_car_sprite := $SpriteHorizontalBadCar
 const SPEED = 200
 

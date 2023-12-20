@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
+
 @onready var animation_player := $AnimationPlayer
 
 const SPEED = 50.0
 var can_move = false
+
 
 func _physics_process(delta):
 	var direction := Vector2(0,0)

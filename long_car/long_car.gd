@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-#@onready var long_car := $Sprite2D
+
 const SPEED = 80
 
 

@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cckq3nbw3c31m"]
+[gd_scene load_steps=6 format=3 uid="uid://cckq3nbw3c31m"]
 
 [ext_resource type="Script" path="res://bad_car/bad_car.gd" id="1_qhi4n"]
 [ext_resource type="Texture2D" uid="uid://qjs4rayke5lh" path="res://raw_assets/car3.png" id="2_ym6p2"]
-[ext_resource type="AudioStream" uid="uid://ollbc5gdjjks" path="res://raw_assets/crash.wav" id="3_dbllb"]
 [ext_resource type="PackedScene" uid="uid://bwvmov62y5hi0" path="res://common/splat.tscn" id="4_wy6wy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbotj"]
@@ -23,9 +22,6 @@ shape = SubResource("RectangleShape2D_bbotj")
 [node name="SpriteBadCar" type="Sprite2D" parent="."]
 position = Vector2(8, 8)
 texture = ExtResource("2_ym6p2")
-
-[node name="CrashSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_dbllb")
 
 [node name="Area2D" type="Area2D" parent="."]
 

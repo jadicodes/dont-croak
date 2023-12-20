@@ -1,4 +1,6 @@
+CanvasLayer
 AudioStreamPlayer2D
+Node
 AnimationPlayer
 CharacterBody2D
 CollisionShape2D
@@ -10,7 +12,6 @@ Timer
 CPUParticles2D
 AudioStreamPlayer3D
 Label
-CanvasLayer
 TextureButton
 Button
 ColorRect

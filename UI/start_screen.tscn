@@ -19,7 +19,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("C:position")
+tracks/0/path = NodePath("TitleAnimation/TitleDontCroak/C:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -31,7 +31,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("R:position")
+tracks/1/path = NodePath("TitleAnimation/TitleDontCroak/R:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -43,7 +43,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("O:position")
+tracks/2/path = NodePath("TitleAnimation/TitleDontCroak/O:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -55,7 +55,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("A:position")
+tracks/3/path = NodePath("TitleAnimation/TitleDontCroak/A:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -67,7 +67,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("K:position")
+tracks/4/path = NodePath("TitleAnimation/TitleDontCroak/K:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -79,7 +79,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("K:modulate")
+tracks/5/path = NodePath("TitleAnimation/TitleDontCroak/K:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -91,7 +91,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("C:modulate")
+tracks/6/path = NodePath("TitleAnimation/TitleDontCroak/C:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -103,7 +103,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("R:modulate")
+tracks/7/path = NodePath("TitleAnimation/TitleDontCroak/R:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -115,7 +115,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("O:modulate")
+tracks/8/path = NodePath("TitleAnimation/TitleDontCroak/O:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -127,7 +127,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("A:modulate")
+tracks/9/path = NodePath("TitleAnimation/TitleDontCroak/A:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -136,6 +136,126 @@ tracks/9/keys = {
 "update": 0,
 "values": [Color(0.839216, 0.94902, 0.392157, 1)]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TitleAnimation/CroakSound:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("TitleAnimation/CrashSound:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("TitleAnimation/TitleSplat/Splat:emitting")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TitleAnimation/TitleSplat/Splat:color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("TitleAnimation/TitleSplat/Splat2:emitting")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("TitleAnimation/TitleSplat/Splat2:color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("TitleAnimation/TitleSplat/Splat3:emitting")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("TitleAnimation/TitleSplat/Splat3:color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("TitleAnimation/TitleSplat/Splat4:emitting")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("TitleAnimation/TitleSplat/Splat4:color")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
 
 [sub_resource type="Animation" id="Animation_sfini"]
 resource_name = "woo"
@@ -143,7 +263,7 @@ length = 2.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("C:position")
+tracks/0/path = NodePath("TitleAnimation/TitleDontCroak/C:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -155,7 +275,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("R:position")
+tracks/1/path = NodePath("TitleAnimation/TitleDontCroak/R:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -167,7 +287,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("O:position")
+tracks/2/path = NodePath("TitleAnimation/TitleDontCroak/O:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -179,7 +299,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("A:position")
+tracks/3/path = NodePath("TitleAnimation/TitleDontCroak/A:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -191,7 +311,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("K:position")
+tracks/4/path = NodePath("TitleAnimation/TitleDontCroak/K:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -203,7 +323,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("K:modulate")
+tracks/5/path = NodePath("TitleAnimation/TitleDontCroak/K:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -215,7 +335,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("C:modulate")
+tracks/6/path = NodePath("TitleAnimation/TitleDontCroak/C:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -227,7 +347,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("R:modulate")
+tracks/7/path = NodePath("TitleAnimation/TitleDontCroak/R:modulate")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -239,7 +359,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("O:modulate")
+tracks/8/path = NodePath("TitleAnimation/TitleDontCroak/O:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -251,7 +371,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("A:modulate")
+tracks/9/path = NodePath("TitleAnimation/TitleDontCroak/A:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -259,6 +379,126 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0.839216, 0.94902, 0.392157, 1), Color(0.623529, 0, 0, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("TitleAnimation/CroakSound:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("TitleAnimation/CrashSound:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("TitleAnimation/TitleSplat/Splat:emitting")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("TitleAnimation/TitleSplat/Splat:color")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("TitleAnimation/TitleSplat/Splat2:emitting")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("TitleAnimation/TitleSplat/Splat2:color")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("TitleAnimation/TitleSplat/Splat3:emitting")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("TitleAnimation/TitleSplat/Splat3:color")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("TitleAnimation/TitleSplat/Splat4:emitting")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("TitleAnimation/TitleSplat/Splat4:color")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cnbyd"]
@@ -270,11 +510,80 @@ _data = {
 [node name="StartScreen" type="Node2D"]
 script = ExtResource("1_xjr5f")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 offset_left = -1.0
 offset_right = 320.0
 offset_bottom = 180.0
 color = Color(0.878431, 1, 0.72549, 1)
+
+[node name="TitleAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cnbyd")
+}
+
+[node name="CroakSound" type="AudioStreamPlayer2D" parent="TitleAnimation"]
+position = Vector2(184, 49.25)
+scale = Vector2(1, 0.987179)
+stream = ExtResource("11_c4s32")
+volume_db = 2.0
+
+[node name="CrashSound" type="AudioStreamPlayer2D" parent="TitleAnimation"]
+position = Vector2(184, 49.25)
+scale = Vector2(1, 0.987179)
+stream = ExtResource("12_17kog")
+
+[node name="TitleSplat" type="CanvasLayer" parent="TitleAnimation"]
+
+[node name="Splat" parent="TitleAnimation/TitleSplat" instance=ExtResource("12_6lewy")]
+position = Vector2(100, 45)
+color = Color(1, 0, 0, 1)
+
+[node name="Splat2" parent="TitleAnimation/TitleSplat" instance=ExtResource("12_6lewy")]
+position = Vector2(142, 59)
+color = Color(1, 0, 0, 1)
+
+[node name="Splat3" parent="TitleAnimation/TitleSplat" instance=ExtResource("12_6lewy")]
+position = Vector2(179, 46)
+color = Color(1, 0, 0, 1)
+
+[node name="Splat4" parent="TitleAnimation/TitleSplat" instance=ExtResource("12_6lewy")]
+position = Vector2(211, 58)
+color = Color(1, 0, 0, 1)
+
+[node name="TitleDontCroak" type="CanvasLayer" parent="TitleAnimation"]
+
+[node name="Dont" type="Sprite2D" parent="TitleAnimation/TitleDontCroak"]
+modulate = Color(0, 0.227451, 0.215686, 1)
+position = Vector2(161, 23)
+texture = ExtResource("5_gig3d")
+
+[node name="C" type="Sprite2D" parent="TitleAnimation/TitleDontCroak"]
+modulate = Color(0.196078, 0.517647, 0.392157, 1)
+position = Vector2(112.25, 52)
+scale = Vector2(1.01613, 1)
+texture = ExtResource("6_mjcsw")
+
+[node name="R" type="Sprite2D" parent="TitleAnimation/TitleDontCroak"]
+modulate = Color(0.427451, 0.458824, 0.552941, 1)
+position = Vector2(137, 48)
+texture = ExtResource("7_jsork")
+
+[node name="O" type="Sprite2D" parent="TitleAnimation/TitleDontCroak"]
+modulate = Color(0.976471, 0.639216, 0.105882, 1)
+position = Vector2(160, 50)
+scale = Vector2(1, 0.961538)
+texture = ExtResource("8_o4uhu")
+
+[node name="A" type="Sprite2D" parent="TitleAnimation/TitleDontCroak"]
+modulate = Color(0.839216, 0.94902, 0.392157, 1)
+position = Vector2(184, 48)
+scale = Vector2(1, 0.987179)
+texture = ExtResource("9_uolnm")
+
+[node name="K" type="Sprite2D" parent="TitleAnimation/TitleDontCroak"]
+modulate = Color(0.101961, 0.478431, 0.243137, 1)
+position = Vector2(206, 51)
+texture = ExtResource("10_4xpj5")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 offset_left = 110.0
@@ -320,67 +629,6 @@ offset_right = 98.0
 offset_bottom = 30.0
 theme_override_font_sizes/font_size = 32
 text = "Play Game"
-
-[node name="Splat" parent="." instance=ExtResource("12_6lewy")]
-position = Vector2(100, 45)
-
-[node name="Splat2" parent="." instance=ExtResource("12_6lewy")]
-position = Vector2(142, 59)
-
-[node name="Splat3" parent="." instance=ExtResource("12_6lewy")]
-position = Vector2(179, 46)
-
-[node name="Splat4" parent="." instance=ExtResource("12_6lewy")]
-position = Vector2(211, 58)
-
-[node name="Dont" type="Sprite2D" parent="."]
-modulate = Color(0, 0.227451, 0.215686, 1)
-position = Vector2(161, 23)
-texture = ExtResource("5_gig3d")
-
-[node name="C" type="Sprite2D" parent="."]
-modulate = Color(0.196078, 0.517647, 0.392157, 1)
-position = Vector2(112.25, 52)
-scale = Vector2(1.01613, 1)
-texture = ExtResource("6_mjcsw")
-
-[node name="R" type="Sprite2D" parent="."]
-modulate = Color(0.427451, 0.458824, 0.552941, 1)
-position = Vector2(137, 48)
-texture = ExtResource("7_jsork")
-
-[node name="O" type="Sprite2D" parent="."]
-modulate = Color(0.976471, 0.639216, 0.105882, 1)
-position = Vector2(160, 50)
-scale = Vector2(1, 0.961538)
-texture = ExtResource("8_o4uhu")
-
-[node name="A" type="Sprite2D" parent="."]
-modulate = Color(0.839216, 0.94902, 0.392157, 1)
-position = Vector2(184, 48)
-scale = Vector2(1, 0.987179)
-texture = ExtResource("9_uolnm")
-
-[node name="K" type="Sprite2D" parent="."]
-modulate = Color(0.101961, 0.478431, 0.243137, 1)
-position = Vector2(206, 51)
-texture = ExtResource("10_4xpj5")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_cnbyd")
-}
-
-[node name="CrashSound" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(184, 49.25)
-scale = Vector2(1, 0.987179)
-stream = ExtResource("12_17kog")
-
-[node name="CroakSound" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(184, 49.25)
-scale = Vector2(1, 0.987179)
-stream = ExtResource("11_c4s32")
-volume_db = 2.0
 
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="PlayGameButton" to="." method="_on_play_game_button_pressed"]

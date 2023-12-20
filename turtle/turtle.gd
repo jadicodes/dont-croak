@@ -1,6 +1,9 @@
 extends CharacterBody2D
-@onready var squish := $SquishSound
+
+
 @onready var turtle_sprite := $SpriteTurtle
+@onready var splat := $Splat
+
 const SPEED = 50
 
 
@@ -23,14 +26,13 @@ func _on_area_2d_body_entered(body):
 
 
 func die():
-	$Splat.set_modulate(Color.RED)
-	$Splat.emitting = true
-	squish.play()
+	splat.set_modulate(Color.RED)
+	splat.emitting = true
+	SFX.play_squish()
 	$CollisionShape2D.set_deferred("disabled", true)
 	turtle_sprite.visible = false
 	var positionOfDeath = turtle_sprite.global_position
 	print(positionOfDeath)
-	await squish.finished
 	queue_free()
 	
 

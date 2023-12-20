@@ -1,5 +1,4 @@
 extends Control
-@onready var crash := $CrashSound
 @onready var win := $WinSound
 
 
@@ -8,7 +7,7 @@ func _ready():
 		win.play()
 		$WinLoseLabel.text = "You win!"
 	else:
-		crash.play()
+		SFX.play_crash()
 		$WinLoseLabel.text = "Get rekt"
 
 

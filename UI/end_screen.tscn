@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://btej4eay0l5pn"]
+[gd_scene load_steps=6 format=3 uid="uid://btej4eay0l5pn"]
 
 [ext_resource type="Script" path="res://UI/end_screen.gd" id="1_pfb1q"]
 [ext_resource type="Theme" uid="uid://bg2kortavqt36" path="res://theme.tres" id="2_o3k83"]
 [ext_resource type="Texture2D" uid="uid://c37tpepocswvk" path="res://raw_assets/Button1.png" id="4_dpxou"]
 [ext_resource type="Texture2D" uid="uid://cspntq2mpirwp" path="res://raw_assets/Button2.png" id="5_nph2o"]
-[ext_resource type="AudioStream" uid="uid://ollbc5gdjjks" path="res://raw_assets/crash.wav" id="5_rwiti"]
 [ext_resource type="AudioStream" uid="uid://baovofs2ipicm" path="res://raw_assets/You Win!.wav" id="6_q8glf"]
 
 [node name="EndScreen" type="Control"]
@@ -88,9 +87,6 @@ theme_override_font_sizes/font_size = 32
 text = "Main Menu"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="CrashSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_rwiti")
 
 [node name="WinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_q8glf")

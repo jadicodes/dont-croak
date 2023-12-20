@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 WinOrLose="*res://common/win_or_lose.gd"
+SFX="*res://common/sfx.tscn"
 
 [display]
 

@@ -22,3 +22,5 @@ res://turtle/turtle.tscn
 res://turtle/turt.tscn
 res://UI/croak.gdshader
 res://UI/start_screen.gd
+res://common/sfx.gd
+res://common/sfx.tscn

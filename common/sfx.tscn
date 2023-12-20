@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://k713iuykpric"]
+
+[ext_resource type="Script" path="res://common/sfx.gd" id="1_kpl0g"]
+[ext_resource type="AudioStream" uid="uid://bvredwindhet0" path="res://raw_assets/squish.wav" id="2_droke"]
+[ext_resource type="AudioStream" uid="uid://ollbc5gdjjks" path="res://raw_assets/crash.wav" id="3_05qoy"]
+[ext_resource type="AudioStream" uid="uid://cmpl78tqjfkd7" path="res://raw_assets/croak.wav" id="4_smk84"]
+
+[node name="SFX" type="Node"]
+script = ExtResource("1_kpl0g")
+
+[node name="Squish" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_droke")
+
+[node name="Crash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_05qoy")
+
+[node name="Croak" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_smk84")
+
+[connection signal="finished" from="Croak" to="." method="_on_croak_finished"]
