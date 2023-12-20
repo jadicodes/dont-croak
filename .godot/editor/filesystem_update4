@@ -20,3 +20,4 @@ res://level/level.tscn
 res://common/off_screen_notifier.gd
 res://common/off_screen_notifier.tscn
 res://bad_car/bad_car.gd
+res://UI/start_screen.gd
