@@ -1,3 +1,4 @@
+ColorRect
 AnimatedSprite2D
 AnimationPlayer
 VisibleOnScreenNotifier2D
@@ -16,5 +17,4 @@ AudioStreamPlayer3D
 Label
 TextureButton
 Button
-ColorRect
 Camera2D

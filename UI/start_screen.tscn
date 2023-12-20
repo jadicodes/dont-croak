@@ -757,7 +757,7 @@ color = Color(1, 0, 0, 1)
 [node name="TitleDontCroak" type="CanvasLayer" parent="TitleAnimation"]
 
 [node name="Dont" type="Sprite2D" parent="TitleAnimation/TitleDontCroak"]
-modulate = Color(0, 0.227451, 0.215686, 1)
+modulate = Color(0.0234375, 0.0234375, 0.03125, 1)
 position = Vector2(161, 23)
 texture = ExtResource("5_gig3d")
 
@@ -833,6 +833,13 @@ offset_right = 98.0
 offset_bottom = 30.0
 theme_override_font_sizes/font_size = 32
 text = "Play Game"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 94.0
+offset_top = 6.0
+offset_right = 223.0
+offset_bottom = 73.0
+color = Color(0.996078, 0.996078, 0.996078, 0.556863)
 
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="PlayGameButton" to="." method="_on_play_game_button_pressed"]
