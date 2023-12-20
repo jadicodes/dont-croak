@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=26 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
@@ -16,6 +16,12 @@
 [ext_resource type="Texture2D" uid="uid://dpfncc7iv4ggd" path="res://raw_assets/highway3.png" id="13_qayd6"]
 [ext_resource type="PackedScene" uid="uid://dj7amho17wutp" path="res://turtle/turtle.tscn" id="15_6y8l0"]
 [ext_resource type="PackedScene" uid="uid://bxc4ayyfikt1j" path="res://police_car/police_car.tscn" id="16_f5hir"]
+[ext_resource type="Texture2D" uid="uid://b8qvu2jl1wogd" path="res://raw_assets/highway4.png" id="17_oeubc"]
+[ext_resource type="Texture2D" uid="uid://dfku8hfa1ai04" path="res://raw_assets/highwaytrans3.png" id="18_8rf3w"]
+[ext_resource type="Texture2D" uid="uid://dxuon3h0wgdv7" path="res://raw_assets/highway5.png" id="19_cqytw"]
+[ext_resource type="Texture2D" uid="uid://cu5cm6cd0fpql" path="res://raw_assets/highwaytrans4.png" id="20_wn1cs"]
+[ext_resource type="Texture2D" uid="uid://bpritxho5y7ai" path="res://raw_assets/highwaytrans5.png" id="21_auuni"]
+[ext_resource type="Texture2D" uid="uid://c8mp3qtlyp56n" path="res://raw_assets/highway6.png" id="22_6utqf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
 size = Vector2(593, 28.25)
@@ -68,6 +74,24 @@ position = Vector2(427, 66)
 
 [node name="Frog5" parent="." instance=ExtResource("1_o6egk")]
 position = Vector2(1279, 158)
+
+[node name="Turtle" parent="." instance=ExtResource("15_6y8l0")]
+position = Vector2(1588, 152)
+
+[node name="Turtle2" parent="." instance=ExtResource("15_6y8l0")]
+position = Vector2(1615, 152)
+
+[node name="Turtle3" parent="." instance=ExtResource("15_6y8l0")]
+position = Vector2(1563, 152)
+
+[node name="Turtle4" parent="." instance=ExtResource("15_6y8l0")]
+position = Vector2(2024, 89)
+
+[node name="Turtle5" parent="." instance=ExtResource("15_6y8l0")]
+position = Vector2(2058, 19)
+
+[node name="Turtle6" parent="." instance=ExtResource("15_6y8l0")]
+position = Vector2(2161, 134)
 
 [node name="Car" parent="." instance=ExtResource("1_pc3bg")]
 position = Vector2(2, 115)
@@ -167,10 +191,31 @@ position = Vector2(1155, 64)
 position = Vector2(2731, 88)
 shape = SubResource("RectangleShape2D_8tjnj")
 
-[node name="Turtle" parent="." instance=ExtResource("15_6y8l0")]
-position = Vector2(143, 127)
-
 [node name="PoliceCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("16_f5hir")]
 position = Vector2(1164, 87)
+
+[node name="Highway4" type="Sprite2D" parent="."]
+position = Vector2(3105, 89)
+texture = ExtResource("17_oeubc")
+
+[node name="Highwaytrans3" type="Sprite2D" parent="."]
+position = Vector2(3736, 89)
+texture = ExtResource("18_8rf3w")
+
+[node name="Highway5" type="Sprite2D" parent="."]
+position = Vector2(4324, 90)
+texture = ExtResource("19_cqytw")
+
+[node name="Highwaytrans4" type="Sprite2D" parent="."]
+position = Vector2(4963, 90)
+texture = ExtResource("20_wn1cs")
+
+[node name="Highwaytrans5" type="Sprite2D" parent="."]
+position = Vector2(5528, 91)
+texture = ExtResource("21_auuni")
+
+[node name="Highway6" type="Sprite2D" parent="."]
+position = Vector2(6148, 91)
+texture = ExtResource("22_6utqf")
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]

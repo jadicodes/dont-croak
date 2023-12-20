@@ -3,6 +3,11 @@ res://theme.tres
 res://UI/croak.gdshader
 res://level/level.tscn
 res://police_car/police_car.tscn
-res://police_car/police_car.gd
 res://common/sfx.tscn
+res://turtle/turt.tscn
+res://turtle/turtle.tscn
+res://turtle/turt.gd
 res://common/sfx.gd
+res://frog/frog.gd
+res://frog/frog.tscn
+res://turtle/turtle.gd
