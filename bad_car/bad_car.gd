@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 200.0
 
 
 func _ready():
@@ -12,4 +12,3 @@ func _physics_process(_delta):
 	var collided := move_and_slide()
 	if collided:
 		velocity.y *= -1
-

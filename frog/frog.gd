@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var squish := $SquishSound
-const SPEED = 300.0
+const SPEED = 75.0
 
 
 func _ready():
@@ -16,12 +16,12 @@ func _physics_process(_delta):
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("car"):
-		kill()
+		die()
 
 
-func kill():
+func die():
 	squish.play()
 	$CollisionShape2D.set_deferred("disabled", true)
-	$ColorRect.visible = false
+	$Sprite2D.visible = false
 	await squish.finished
 	queue_free()

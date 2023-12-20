@@ -13,34 +13,41 @@ script = ExtResource("1_pfb1q")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 647.0
+offset_right = 320.0
+offset_bottom = 180.0
 color = Color(1, 1, 0.301961, 1)
 
 [node name="LoseGameLabel" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 343.0
-offset_top = 85.0
-offset_right = 406.0
-offset_bottom = 111.0
+offset_left = 42.0
+offset_top = 14.0
+offset_right = 82.0
+offset_bottom = 31.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
 text = "Get rekt"
 
 [node name="Button" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_left = 571.0
-offset_top = 371.0
-offset_right = 715.0
-offset_bottom = 402.0
+offset_left = 160.0
+offset_top = 108.0
+offset_right = 217.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 15
 text = "Retry?"
 
 [node name="WinGameLabel" type="Label" parent="."]
+visible = false
+texture_filter = 1
 layout_mode = 0
-offset_left = 307.0
-offset_top = 85.0
-offset_right = 453.0
-offset_bottom = 111.0
+offset_left = 12.0
+offset_top = 13.0
+offset_right = 149.0
+offset_bottom = 38.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
 text = "Congrats! You Win!"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

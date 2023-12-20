@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 175.0
 
 
 func _physics_process(delta):
@@ -23,13 +23,12 @@ func _physics_process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("deadly_obstacles"):
-		kill()
+		die()
 	
 
 
-func kill():
+func die():
 	queue_free()
-	#do end_screen please
 	get_tree().change_scene_to_file("res://UI/end_screen.tscn")
 	
 
