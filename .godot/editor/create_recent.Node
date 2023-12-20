@@ -1,5 +1,8 @@
-Timer
+AudioStreamPlayer2D
+CharacterBody2D
 CollisionShape2D
+Sprite2D
+Timer
 Label
 CanvasLayer
 TextureButton
@@ -7,7 +10,4 @@ Button
 ColorRect
 Camera2D
 Area2D
-Sprite2D
-AudioStreamPlayer2D
 StaticBody2D
-CharacterBody2D

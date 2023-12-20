@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd5vcwaesqoo0"]
+
+[ext_resource type="Texture2D" uid="uid://ca24cfs6bi02b" path="res://raw_assets/car2.png" id="1_5c0pa"]
+[ext_resource type="Script" path="res://horizontal_bad_car/horizontal_bad_car.gd" id="1_mk6ca"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g055q"]
+size = Vector2(16, 16)
+
+[node name="HorizontalBadCar" type="CharacterBody2D"]
+script = ExtResource("1_mk6ca")
+
+[node name="SpriteHorizontalBadCar" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+rotation = 1.5708
+texture = ExtResource("1_5c0pa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_g055q")

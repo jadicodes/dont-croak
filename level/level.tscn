@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=12 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cckq3nbw3c31m" path="res://bad_car/bad_car.tscn" id="3_hbyjk"]
 [ext_resource type="Texture2D" uid="uid://bftjek7ru1kbb" path="res://raw_assets/highway2.png" id="3_nuyvn"]
 [ext_resource type="PackedScene" uid="uid://cw2qxxtqkwax5" path="res://tree/tree.tscn" id="4_8gpkm"]
+[ext_resource type="PackedScene" uid="uid://bd5vcwaesqoo0" path="res://horizontal_bad_car/horizontal_bad_car.tscn" id="8_lhnrb"]
+[ext_resource type="AudioStream" uid="uid://bxvpqwo3adcue" path="res://raw_assets/FrogBoppler.ogg" id="9_11p2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
 size = Vector2(570.125, 6.5)
@@ -62,7 +64,11 @@ shape = SubResource("RectangleShape2D_hgmbe")
 position = Vector2(601, -26)
 
 [node name="BadCar2" parent="." instance=ExtResource("3_hbyjk")]
-position = Vector2(663, 81)
+position = Vector2(630, 90)
+collision_mask = 15
+
+[node name="BadCar3" parent="." instance=ExtResource("3_hbyjk")]
+position = Vector2(665, 140)
 collision_mask = 15
 
 [node name="Tree" parent="." instance=ExtResource("4_8gpkm")]
@@ -85,8 +91,15 @@ position = Vector2(329, 69)
 
 [node name="WinZone" type="Area2D" parent="."]
 
-[node name="WallRight" type="CollisionShape2D" parent="WinZone" groups=["end_of_level"]]
+[node name="WinCollision" type="CollisionShape2D" parent="WinZone" groups=["end_of_level"]]
 position = Vector2(957, 87)
 shape = SubResource("RectangleShape2D_8tjnj")
+
+[node name="HorizontalBadCar" parent="WinZone/WinCollision" instance=ExtResource("8_lhnrb")]
+position = Vector2(-927, 55)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_11p2h")
+autoplay = true
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]
