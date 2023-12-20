@@ -15,3 +15,4 @@ res://long_car/long_car.tscn
 res://long_car/long_car.gd
 res://bad_car/bad_car.gd
 res://common/splat.tscn
+res://car/CarSprite.gd

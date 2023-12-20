@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=15 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
@@ -7,12 +7,16 @@
 [ext_resource type="PackedScene" uid="uid://cckq3nbw3c31m" path="res://bad_car/bad_car.tscn" id="3_hbyjk"]
 [ext_resource type="Texture2D" uid="uid://bftjek7ru1kbb" path="res://raw_assets/highway2.png" id="3_nuyvn"]
 [ext_resource type="PackedScene" uid="uid://cw2qxxtqkwax5" path="res://tree/tree.tscn" id="4_8gpkm"]
+[ext_resource type="Texture2D" uid="uid://b5x3i7xpo1kf7" path="res://raw_assets/highwaytrans1.png" id="4_do2aq"]
 [ext_resource type="PackedScene" uid="uid://bd5vcwaesqoo0" path="res://horizontal_bad_car/horizontal_bad_car.tscn" id="8_lhnrb"]
 [ext_resource type="AudioStream" uid="uid://bxvpqwo3adcue" path="res://raw_assets/FrogBoppler.ogg" id="9_11p2h"]
 [ext_resource type="PackedScene" uid="uid://p8b87vt087n5" path="res://long_car/long_car.tscn" id="10_u5stc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
-size = Vector2(570.125, 6.5)
+size = Vector2(593, 28.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kimnb"]
+size = Vector2(467, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tjnj"]
 size = Vector2(5.25, 185)
@@ -33,6 +37,10 @@ texture = ExtResource("2_kv6io")
 position = Vector2(640, 90)
 texture = ExtResource("3_nuyvn")
 
+[node name="Highwaytrans1" type="Sprite2D" parent="."]
+position = Vector2(1268, 90)
+texture = ExtResource("4_do2aq")
+
 [node name="Frog" parent="." instance=ExtResource("1_o6egk")]
 position = Vector2(66, 41)
 
@@ -42,6 +50,12 @@ position = Vector2(112, 94)
 [node name="Frog3" parent="." instance=ExtResource("1_o6egk")]
 position = Vector2(284, 117)
 
+[node name="Frog4" parent="." instance=ExtResource("1_o6egk")]
+position = Vector2(427, 66)
+
+[node name="Frog5" parent="." instance=ExtResource("1_o6egk")]
+position = Vector2(1279, 158)
+
 [node name="Car" parent="." instance=ExtResource("1_pc3bg")]
 position = Vector2(2, 115)
 
@@ -49,23 +63,39 @@ position = Vector2(2, 115)
 position = Vector2(575, 640)
 
 [node name="WallTopRoadTop" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
-position = Vector2(-278.375, -626)
+position = Vector2(-278, -638)
 shape = SubResource("RectangleShape2D_hgmbe")
 
 [node name="WallBottomRoadBottom" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
-position = Vector2(-266.063, -473)
+position = Vector2(-277.5, -462.125)
 shape = SubResource("RectangleShape2D_hgmbe")
 
 [node name="WallBottomRoadBottom2" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
-position = Vector2(58, -427)
+position = Vector2(60, -434)
 shape = SubResource("RectangleShape2D_hgmbe")
 
 [node name="WallBottomRoadBottom3" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
-position = Vector2(56, -678)
+position = Vector2(56, -667)
 shape = SubResource("RectangleShape2D_hgmbe")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(345.5, -461.5)
+shape = SubResource("RectangleShape2D_kimnb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(345, -637)
+shape = SubResource("RectangleShape2D_kimnb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(794, -653)
+shape = SubResource("RectangleShape2D_kimnb")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(791, -445)
+shape = SubResource("RectangleShape2D_kimnb")
+
 [node name="BadCar" parent="." instance=ExtResource("3_hbyjk")]
-position = Vector2(601, -26)
+position = Vector2(598, -8)
 
 [node name="BadCar2" parent="." instance=ExtResource("3_hbyjk")]
 position = Vector2(630, 90)
@@ -93,15 +123,11 @@ position = Vector2(143, 91)
 [node name="Tree6" parent="." instance=ExtResource("4_8gpkm")]
 position = Vector2(329, 69)
 
-[node name="WinZone" type="Area2D" parent="."]
-
-[node name="WinCollision" type="CollisionShape2D" parent="WinZone" groups=["end_of_level"]]
-position = Vector2(957, 87)
-shape = SubResource("RectangleShape2D_8tjnj")
-
 [node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 8)
 stream = ExtResource("9_11p2h")
 autoplay = true
+attenuation = 0.00248938
 
 [node name="HorizontalBadCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
 position = Vector2(390, 21)
@@ -111,5 +137,11 @@ position = Vector2(893, 45)
 
 [node name="LongCar" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
 position = Vector2(-97, 144)
+
+[node name="WinZone" type="Area2D" parent="."]
+
+[node name="WinCollision" type="CollisionShape2D" parent="WinZone" groups=["end_of_level"]]
+position = Vector2(1519, 89)
+shape = SubResource("RectangleShape2D_8tjnj")
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]

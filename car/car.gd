@@ -1,11 +1,15 @@
 extends CharacterBody2D
 
-const SPEED = 100.0
+@onready var animation_player := $AnimationPlayer
+
+const SPEED = 50.0
 var can_move = false
 
 func _physics_process(delta):
+	var direction := Vector2(0,0)
 	if can_move == true:
-		var direction := Vector2(1,0)
+		animation_player.play("shake")
+		direction = Vector2(1,0)
 		
 		if Input.is_action_pressed("move_up"):
 			direction.y -= 1
@@ -14,8 +18,9 @@ func _physics_process(delta):
 
 		move_and_collide(direction * SPEED * delta)
 	else:
-		var direction := Vector2(0,0)
-		move_and_collide(direction * SPEED * delta)
+		animation_player.play("shake")
+	
+	move_and_collide(direction * SPEED * delta)
 
 
 func _on_start_timer_timeout():
