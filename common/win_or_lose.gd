@@ -1,6 +1,8 @@
 extends Node
-@onready var win = false
 
-func swap():
+
+@onready var win := false
+
+
+func swap() -> void:
 	win = !win
-	print(win)

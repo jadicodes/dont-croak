@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
-@export var SPEED = 85
+@export var SPEED : int = 85
 
 @onready var police_sprite := $PoliceCarSprite
+
 var can_move = false
 
 
-func _physics_process(_delta):
+func _physics_process(_delta) -> void:
 	if can_move == true:
 		velocity = Vector2(SPEED, 1)
 	else:
@@ -15,7 +16,7 @@ func _physics_process(_delta):
 	move_and_slide()
 
 
-func _on_visible_on_screen_notifier_2d_screen_entered():
+func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
 	SFX.play_siren()
 	can_move = true
 	

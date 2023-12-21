@@ -4,15 +4,15 @@ extends CharacterBody2D
 @onready var turtle_sprite := $SpriteTurtle
 @onready var splat := $Splat
 
-var turted = false
-var SPEED = 50
+var turted : bool = false
+var SPEED : int = 50
 
 
-func _ready():
+func _ready() -> void:
 	velocity = Vector2(0, -SPEED)
 
 
-func _physics_process(_delta):
+func _physics_process(_delta) -> void:
 	if turted:
 		pass
 	else:
@@ -23,14 +23,14 @@ func _physics_process(_delta):
 			turt_sprite.flip_v = !turt_sprite.flip_v
 		
 		
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(body) -> void:
 	if body.is_in_group("car") or body.is_in_group("deadly_obstacles"): 
 		turt()
 	if body.is_in_group("very_deadly_obstacles"):
 		die()
 
 
-func die():
+func die() -> void:
 	splat.set_modulate(Color.RED)
 	splat.emitting = true
 	SFX.play_squish()
@@ -40,7 +40,7 @@ func die():
 	turt_sprite.visible = false
 	
 
-func turt():
+func turt() -> void:
 	$CollisionShape2D.set_deferred("disabled",true)
 	SFX.play_thud()
 	turtle_sprite.visible = false

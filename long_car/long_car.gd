@@ -1,15 +1,15 @@
 extends CharacterBody2D
 
 
-@export var SPEED = 80
-@export var ySpeed = 80
+@export var SPEED : int = 80
+@export var ySpeed : int = 80
 var can_move = false
 
-func _ready():
+func _ready() -> void:
 	velocity = Vector2(SPEED, ySpeed)
 
 
-func _physics_process(_delta):
+func _physics_process(_delta) -> void:
 	if can_move == true:
 		velocity = Vector2(SPEED, ySpeed)
 	else:
@@ -18,5 +18,5 @@ func _physics_process(_delta):
 	move_and_slide()
 
 
-func _on_visible_on_screen_notifier_2d_screen_entered():
+func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
 	can_move = true

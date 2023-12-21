@@ -21,3 +21,17 @@ res://common/sfx.gd
 res://common/sfx.tscn
 res://bad_car/bad_car.gd
 res://car/car.gd
+res://common/off_screen_notifier.gd
+res://common/win_or_lose.gd
+res://frog/frog.gd
+res://high_friction_area/high_friction_area.gd
+res://deadly_cars/long_car/long_car.gd
+res://deadly_cars/police_car/police_car.gd
+res://tree/tree.tscn
+res://horizontal_bad_car/horizontal_bad_car.gd
+res://long_car/long_car.gd
+res://Moose/moose.gd
+res://police_car/police_car.gd
+res://turtle/turtle.gd
+res://README.md
+res://wheat/wheat.gd

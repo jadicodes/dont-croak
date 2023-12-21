@@ -1,4 +1,6 @@
 extends Node2D
+
+
 @onready var how_to_play := $ControlsButton/ControlsLabel/HowToPlayRect
 @onready var sfw_label := $SFWButton/SFWLabel
 @onready var nsfw_label := $SFWButton/NSFWLabel
