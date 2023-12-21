@@ -1,4 +1,9 @@
 AudioStreamPlayer
+Label
+TextureButton
+Button
+ColorRect
+CanvasLayer
 CollisionShape2D
 Area2D
 Sprite2D
@@ -8,14 +13,9 @@ VisibleOnScreenNotifier2D
 CharacterBody2D
 AnimatedSprite2D
 Node
-CanvasLayer
 RigidBody2D
 AudioStreamPlayer2D
-ColorRect
 Timer
 CPUParticles2D
 AudioStreamPlayer3D
-Label
-TextureButton
-Button
 Camera2D

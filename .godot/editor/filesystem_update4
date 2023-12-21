@@ -16,3 +16,8 @@ res://level/level.gd
 res://Barrier/breakable_barrier.tscn
 res://Barrier/breakable_barrier.gd
 res://common/speed.gd
+res://UI/start_screen.gd
+res://common/sfx.gd
+res://common/sfx.tscn
+res://bad_car/bad_car.gd
+res://car/car.gd

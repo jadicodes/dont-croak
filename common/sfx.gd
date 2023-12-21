@@ -1,5 +1,6 @@
 extends Node
 
+var nsfw_mode = false
 
 
 func play_squish() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://barfrjqpe6idx"]
+[gd_scene load_steps=69 format=3 uid="uid://barfrjqpe6idx"]
 
 [ext_resource type="Script" path="res://UI/start_screen.gd" id="1_xjr5f"]
 [ext_resource type="Texture2D" uid="uid://dv6365xyjfojp" path="res://raw_assets/titleanimation1.png" id="2_2ptlq"]
@@ -62,6 +62,8 @@
 [ext_resource type="Texture2D" uid="uid://fhj288pagtxd" path="res://raw_assets/titleanimation47.png" id="48_mmphw"]
 [ext_resource type="Texture2D" uid="uid://bol3177a0wnum" path="res://raw_assets/titleanimation48.png" id="49_k3fli"]
 [ext_resource type="Texture2D" uid="uid://dnt4i7mxfptmw" path="res://raw_assets/titleanimation49.png" id="50_jgx7a"]
+[ext_resource type="Texture2D" uid="uid://cn6ifb5v7twh7" path="res://raw_assets/moose1.png" id="63_1m4s6"]
+[ext_resource type="Texture2D" uid="uid://dffujur2a2y7h" path="res://raw_assets/deer1.png" id="64_n7b8n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ufj6p"]
 animations = [{
@@ -791,9 +793,9 @@ texture = ExtResource("10_4xpj5")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 offset_left = 110.0
-offset_top = 124.0
+offset_top = 141.0
 offset_right = 212.0
-offset_bottom = 156.0
+offset_bottom = 173.0
 theme = ExtResource("2_ijcp6")
 texture_normal = ExtResource("3_w8yjo")
 texture_pressed = ExtResource("4_ib5t8")
@@ -815,9 +817,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 110.0
-offset_top = 82.0
+offset_top = 77.0
 offset_right = 212.0
-offset_bottom = 116.0
+offset_bottom = 111.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_ijcp6")
@@ -834,6 +836,94 @@ offset_bottom = 30.0
 theme_override_font_sizes/font_size = 32
 text = "Play Game"
 
+[node name="ControlsButton" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = 109.0
+offset_right = 212.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ijcp6")
+texture_normal = ExtResource("3_w8yjo")
+texture_pressed = ExtResource("4_ib5t8")
+stretch_mode = 0
+
+[node name="ControlsLabel" type="Label" parent="ControlsButton"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 101.0
+offset_bottom = 33.0
+theme_override_font_sizes/font_size = 32
+text = "Controls
+"
+
+[node name="HowToPlayRect" type="ColorRect" parent="ControlsButton/ControlsLabel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -37.5
+offset_right = 62.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101563, 0.476563, 0.242188, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ControlsButton/ControlsLabel/HowToPlayRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 122.0
+offset_bottom = 68.0
+color = Color(0.347656, 0.753906, 0.207031, 1)
+
+[node name="HowToPlayLabel" type="Label" parent="ControlsButton/ControlsLabel/HowToPlayRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -34.5
+offset_right = 53.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 16
+text = "W/Up Arrow - Up
+S/Down Arrow - Down"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OKButton" type="Button" parent="ControlsButton/ControlsLabel/HowToPlayRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = 7.5
+offset_right = 13.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ijcp6")
+theme_override_font_sizes/font_size = 16
+text = "OK
+"
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 94.0
 offset_top = 6.0
@@ -841,5 +931,37 @@ offset_right = 223.0
 offset_bottom = 73.0
 color = Color(0.996078, 0.996078, 0.996078, 0.556863)
 
+[node name="SFWButton" type="TextureButton" parent="."]
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 37.0
+offset_bottom = 36.0
+toggle_mode = true
+texture_normal = ExtResource("64_n7b8n")
+texture_pressed = ExtResource("63_1m4s6")
+
+[node name="NSFWLabel" type="Label" parent="SFWButton"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 33.0
+offset_right = 28.0
+offset_bottom = 46.0
+theme = ExtResource("2_ijcp6")
+theme_override_font_sizes/font_size = 16
+text = "NSFW"
+
+[node name="SFWLabel" type="Label" parent="SFWButton"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 33.0
+offset_right = 47.0
+offset_bottom = 56.0
+theme = ExtResource("2_ijcp6")
+theme_override_font_sizes/font_size = 16
+text = "SFW"
+
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="PlayGameButton" to="." method="_on_play_game_button_pressed"]
+[connection signal="pressed" from="ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="ControlsButton/ControlsLabel/HowToPlayRect/OKButton" to="." method="_on_ok_button_pressed"]
+[connection signal="toggled" from="SFWButton" to="." method="_on_sfw_button_toggled"]

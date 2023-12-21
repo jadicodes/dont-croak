@@ -838,7 +838,7 @@ shape = SubResource("CircleShape2D_l6boi")
 
 [node name="Overheadsign1" type="Sprite2D" parent="Overheadsign1_sb"]
 z_index = 8
-position = Vector2(1957, 93)
+position = Vector2(1957, 92)
 scale = Vector2(1, 0.861111)
 texture = ExtResource("28_ovqgi")
 

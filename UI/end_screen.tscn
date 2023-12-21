@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://btej4eay0l5pn"]
+[gd_scene load_steps=8 format=3 uid="uid://btej4eay0l5pn"]
 
 [ext_resource type="Script" path="res://UI/end_screen.gd" id="1_pfb1q"]
 [ext_resource type="Theme" uid="uid://bg2kortavqt36" path="res://theme.tres" id="2_o3k83"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://bany2q853lcpc" path="res://raw_assets/YOU_CROAKED_clean!.wav" id="5_5t2fs"]
 [ext_resource type="AudioStream" uid="uid://baovofs2ipicm" path="res://raw_assets/You Win!.wav" id="5_hhqo3"]
 [ext_resource type="Texture2D" uid="uid://cspntq2mpirwp" path="res://raw_assets/Button2.png" id="5_nph2o"]
+[ext_resource type="AudioStream" uid="uid://c2j6niatave38" path="res://raw_assets/YOU_CROAKED!.wav" id="7_dxgkx"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -69,9 +70,9 @@ text = "Play Again"
 [node name="MainMenuButton" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 104.0
-offset_top = 118.0
+offset_top = 107.0
 offset_right = 215.0
-offset_bottom = 154.0
+offset_bottom = 143.0
 theme = ExtResource("2_o3k83")
 texture_normal = ExtResource("4_dpxou")
 texture_pressed = ExtResource("5_nph2o")
@@ -89,11 +90,82 @@ text = "Main Menu"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CreditsButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 141.0
+offset_right = 215.0
+offset_bottom = 177.0
+theme = ExtResource("2_o3k83")
+texture_normal = ExtResource("4_dpxou")
+texture_pressed = ExtResource("5_nph2o")
+stretch_mode = 0
+
+[node name="CreditsLabel" type="Label" parent="CreditsButton"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 102.0
+offset_bottom = 32.0
+theme = ExtResource("2_o3k83")
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsForReal" type="ColorRect" parent="CreditsButton"]
+visible = false
+layout_mode = 0
+offset_left = -101.0
+offset_top = -138.0
+offset_right = 213.0
+offset_bottom = 36.0
+color = Color(1, 0.976471, 0.45098, 1)
+
+[node name="Label" type="Label" parent="CreditsButton/CreditsForReal"]
+layout_mode = 0
+offset_top = -7.0
+offset_right = 314.0
+offset_bottom = 167.0
+theme_override_colors/font_color = Color(0, 0.309804, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Made in 48 hours by
+Jadi Miller, Hunter Johns, and Peyton Kistler
+
+3rd Party Assets
+Font: kheftel, 2015, \"Minimalist Pixel Fonts\"
+Squish Sound: mrickey13, 2020, \"Splat/Squish 4\"
+Crash Sound: SuperSouper, 2023, \"Carhit3.wav\"
+Siren Sound: szpury, 2015, \"police siren one loop loop able\"
+Thud Sound: kyles, 2018, \"bucket plastic down on hard surface thud on offmic India.flac\"
+
+All other assets made by developers.
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="OKButton" type="Button" parent="CreditsButton/CreditsForReal/Label"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 163.0
+offset_right = 167.0
+offset_bottom = 181.0
+theme = ExtResource("2_o3k83")
+theme_override_font_sizes/font_size = 16
+text = "OK
+"
+
 [node name="WinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_hhqo3")
 
 [node name="LoseSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_5t2fs")
 
+[node name="LoseNSFWSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_dxgkx")
+
 [connection signal="pressed" from="PlayAgainButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CreditsButton/CreditsForReal/Label/OKButton" to="." method="_on_ok_button_pressed"]
