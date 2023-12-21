@@ -9,16 +9,16 @@
 [node name="SFX" type="Node"]
 script = ExtResource("1_kpl0g")
 
-[node name="Squish" type="AudioStreamPlayer2D" parent="."]
+[node name="Squish" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_droke")
 
-[node name="Crash" type="AudioStreamPlayer2D" parent="."]
+[node name="Crash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_05qoy")
 
-[node name="Croak" type="AudioStreamPlayer2D" parent="."]
+[node name="Croak" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_smk84")
 
-[node name="Police" type="AudioStreamPlayer2D" parent="."]
+[node name="Police" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_02mr7")
 
 [connection signal="finished" from="Croak" to="." method="_on_croak_finished"]

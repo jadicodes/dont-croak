@@ -11,3 +11,5 @@ res://common/sfx.gd
 res://frog/frog.gd
 res://frog/frog.tscn
 res://turtle/turtle.gd
+res://wheat/wheat.tscn
+res://wheat/wheat.gd

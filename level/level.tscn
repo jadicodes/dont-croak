@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=27 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b5x3i7xpo1kf7" path="res://raw_assets/highwaytrans1.png" id="4_do2aq"]
 [ext_resource type="Texture2D" uid="uid://dq0xlhlp4kpgb" path="res://raw_assets/highwaytrans2.png" id="6_21hw7"]
 [ext_resource type="PackedScene" uid="uid://bd5vcwaesqoo0" path="res://horizontal_bad_car/horizontal_bad_car.tscn" id="8_lhnrb"]
-[ext_resource type="AudioStream" uid="uid://bxvpqwo3adcue" path="res://raw_assets/FrogBoppler.ogg" id="9_11p2h"]
+[ext_resource type="AudioStream" uid="uid://cyeco4an2rujf" path="res://raw_assets/FrogBoppler.ogg" id="9_11p2h"]
 [ext_resource type="PackedScene" uid="uid://p8b87vt087n5" path="res://long_car/long_car.tscn" id="10_u5stc"]
 [ext_resource type="PackedScene" uid="uid://cb7fa3oevm163" path="res://Barrier/barrier.tscn" id="12_m7th1"]
 [ext_resource type="Texture2D" uid="uid://dpfncc7iv4ggd" path="res://raw_assets/highway3.png" id="13_qayd6"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://cu5cm6cd0fpql" path="res://raw_assets/highwaytrans4.png" id="20_wn1cs"]
 [ext_resource type="Texture2D" uid="uid://bpritxho5y7ai" path="res://raw_assets/highwaytrans5.png" id="21_auuni"]
 [ext_resource type="Texture2D" uid="uid://c8mp3qtlyp56n" path="res://raw_assets/highway6.png" id="22_6utqf"]
+[ext_resource type="PackedScene" uid="uid://bgxi8o4vjl76l" path="res://wheat/wheat.tscn" id="23_y8j8b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
 size = Vector2(593, 28.25)
@@ -40,155 +41,238 @@ wait_time = 3.0
 one_shot = true
 autostart = true
 
-[node name="Highway" type="Sprite2D" parent="."]
+[node name="Highways" type="Node" parent="."]
+
+[node name="Highway" type="Sprite2D" parent="Highways"]
+z_index = -1
 position = Vector2(160, 90)
 texture = ExtResource("2_kv6io")
 
-[node name="Highway2" type="Sprite2D" parent="."]
+[node name="Highway2" type="Sprite2D" parent="Highways"]
+z_index = -1
 position = Vector2(640, 90)
 texture = ExtResource("3_nuyvn")
 
-[node name="HighwayTrans1" type="Sprite2D" parent="."]
+[node name="HighwayTrans1" type="Sprite2D" parent="Highways"]
+z_index = -1
 position = Vector2(1268, 90)
 texture = ExtResource("4_do2aq")
 
-[node name="Highway3" type="Sprite2D" parent="."]
+[node name="Highway3" type="Sprite2D" parent="Highways"]
+z_index = -1
 position = Vector2(1835, 89)
 texture = ExtResource("13_qayd6")
 
-[node name="HighwayTrans2" type="Sprite2D" parent="."]
+[node name="HighwayTrans2" type="Sprite2D" parent="Highways"]
+z_index = -1
 position = Vector2(2468, 89)
 texture = ExtResource("6_21hw7")
 
-[node name="Frog" parent="." instance=ExtResource("1_o6egk")]
+[node name="Highway4" type="Sprite2D" parent="Highways"]
+z_index = -1
+position = Vector2(3105, 89)
+texture = ExtResource("17_oeubc")
+
+[node name="Highwaytrans3" type="Sprite2D" parent="Highways"]
+z_index = -1
+position = Vector2(3736, 89)
+texture = ExtResource("18_8rf3w")
+
+[node name="Highway5" type="Sprite2D" parent="Highways"]
+z_index = -1
+position = Vector2(4324, 90)
+texture = ExtResource("19_cqytw")
+
+[node name="Highwaytrans4" type="Sprite2D" parent="Highways"]
+z_index = -1
+position = Vector2(4963, 90)
+texture = ExtResource("20_wn1cs")
+
+[node name="Highwaytrans5" type="Sprite2D" parent="Highways"]
+z_index = -1
+position = Vector2(5528, 91)
+texture = ExtResource("21_auuni")
+
+[node name="Highway6" type="Sprite2D" parent="Highways"]
+z_index = -1
+position = Vector2(6148, 90)
+texture = ExtResource("22_6utqf")
+
+[node name="Frogs" type="Node" parent="."]
+
+[node name="Frog" parent="Frogs" instance=ExtResource("1_o6egk")]
 position = Vector2(66, 41)
 
-[node name="Frog2" parent="." instance=ExtResource("1_o6egk")]
+[node name="Frog2" parent="Frogs" instance=ExtResource("1_o6egk")]
 position = Vector2(112, 94)
 
-[node name="Frog3" parent="." instance=ExtResource("1_o6egk")]
+[node name="Frog3" parent="Frogs" instance=ExtResource("1_o6egk")]
 position = Vector2(284, 117)
 
-[node name="Frog4" parent="." instance=ExtResource("1_o6egk")]
+[node name="Frog4" parent="Frogs" instance=ExtResource("1_o6egk")]
 position = Vector2(427, 66)
 
-[node name="Frog5" parent="." instance=ExtResource("1_o6egk")]
+[node name="Frog5" parent="Frogs" instance=ExtResource("1_o6egk")]
 position = Vector2(1279, 158)
 
-[node name="Turtle" parent="." instance=ExtResource("15_6y8l0")]
-position = Vector2(1588, 152)
+[node name="Frog6" parent="Frogs" instance=ExtResource("1_o6egk")]
+position = Vector2(1048, 86)
 
-[node name="Turtle2" parent="." instance=ExtResource("15_6y8l0")]
-position = Vector2(1615, 152)
+[node name="Frog7" parent="Frogs" instance=ExtResource("1_o6egk")]
+position = Vector2(1891, 115)
 
-[node name="Turtle3" parent="." instance=ExtResource("15_6y8l0")]
+[node name="Turtles" type="Node" parent="."]
+
+[node name="Turtle" parent="Turtles" instance=ExtResource("15_6y8l0")]
+position = Vector2(1808, 151)
+
+[node name="Turtle2" parent="Turtles" instance=ExtResource("15_6y8l0")]
+position = Vector2(1678, 69)
+
+[node name="Turtle3" parent="Turtles" instance=ExtResource("15_6y8l0")]
 position = Vector2(1563, 152)
 
-[node name="Turtle4" parent="." instance=ExtResource("15_6y8l0")]
+[node name="Turtle4" parent="Turtles" instance=ExtResource("15_6y8l0")]
 position = Vector2(2024, 89)
 
-[node name="Turtle5" parent="." instance=ExtResource("15_6y8l0")]
+[node name="Turtle5" parent="Turtles" instance=ExtResource("15_6y8l0")]
 position = Vector2(2058, 19)
 
-[node name="Turtle6" parent="." instance=ExtResource("15_6y8l0")]
+[node name="Turtle6" parent="Turtles" instance=ExtResource("15_6y8l0")]
 position = Vector2(2161, 134)
 
-[node name="Car" parent="." instance=ExtResource("1_pc3bg")]
-position = Vector2(2, 115)
+[node name="Wheats" type="Node" parent="."]
 
-[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="Car"]
-position = Vector2(-2, -107)
-stream = ExtResource("9_11p2h")
-autoplay = true
+[node name="Wheat" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5858, 51)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Wheat2" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5911, 92)
+
+[node name="Wheat3" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5952, 23)
+
+[node name="Wheat4" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5910, 115)
+
+[node name="Wheat5" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5992, 105)
+
+[node name="Wheat6" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6006, 63)
+
+[node name="Wheat7" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6022, 82)
+
+[node name="Wheat8" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6130, 44)
+
+[node name="Wheat9" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6081, 120)
+
+[node name="Wheat10" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6079, 98)
+
+[node name="Wheat11" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6025, 28)
+
+[node name="Wheat12" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5897, 33)
+
+[node name="Wheat13" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5770, 118)
+
+[node name="Wheat14" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5792, 84)
+
+[node name="Boundaries" type="StaticBody2D" parent="."]
 position = Vector2(575, 640)
 
-[node name="WallTopRoadTop" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
+[node name="WallTopRoadTop" type="CollisionShape2D" parent="Boundaries" groups=["boundaries"]]
 position = Vector2(-279, -653)
 shape = SubResource("RectangleShape2D_hgmbe")
 
-[node name="WallBottomRoadBottom" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
+[node name="WallBottomRoadBottom" type="CollisionShape2D" parent="Boundaries" groups=["boundaries"]]
 position = Vector2(-278, -447)
 shape = SubResource("RectangleShape2D_hgmbe")
 
-[node name="WallBottomRoadBottom2" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
+[node name="WallBottomRoadBottom2" type="CollisionShape2D" parent="Boundaries" groups=["boundaries"]]
 position = Vector2(60, -434)
 shape = SubResource("RectangleShape2D_hgmbe")
 
-[node name="WallBottomRoadBottom3" type="CollisionShape2D" parent="StaticBody2D" groups=["boundaries"]]
+[node name="WallBottomRoadBottom3" type="CollisionShape2D" parent="Boundaries" groups=["boundaries"]]
 position = Vector2(56, -667)
 shape = SubResource("RectangleShape2D_hgmbe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(346, -447)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(345, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(1059, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(1059, -447)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(1773, -447)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(2487, -447)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(3201, -447)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(3915, -447)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(4629, -447)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(5343, -447)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(5536, -447)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(5536, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(2487, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(3201, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(3915, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(4629, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(5343, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(1773, -652)
 shape = SubResource("RectangleShape2D_kimnb")
 
@@ -201,6 +285,14 @@ collision_mask = 15
 
 [node name="BadCar3" parent="." instance=ExtResource("3_hbyjk")]
 position = Vector2(665, 140)
+collision_mask = 15
+
+[node name="BadCar4" parent="." instance=ExtResource("3_hbyjk")]
+position = Vector2(3756, 158)
+collision_mask = 15
+
+[node name="BadCar5" parent="." instance=ExtResource("3_hbyjk")]
+position = Vector2(3781, 45)
 collision_mask = 15
 
 [node name="Tree" parent="." instance=ExtResource("4_8gpkm")]
@@ -221,6 +313,12 @@ position = Vector2(143, 91)
 [node name="Tree6" parent="." instance=ExtResource("4_8gpkm")]
 position = Vector2(329, 69)
 
+[node name="PoliceCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("16_f5hir")]
+position = Vector2(1164, 87)
+
+[node name="PoliceCar2" parent="." groups=["deadly_obstacles"] instance=ExtResource("16_f5hir")]
+position = Vector2(1410, 24)
+
 [node name="HorizontalBadCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
 position = Vector2(390, 21)
 
@@ -233,37 +331,19 @@ position = Vector2(-97, 144)
 [node name="Barrier" parent="." groups=["deadly_obstacles"] instance=ExtResource("12_m7th1")]
 position = Vector2(1155, 64)
 
-[node name="PoliceCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("16_f5hir")]
-position = Vector2(1164, 87)
-
-[node name="Highway4" type="Sprite2D" parent="."]
-position = Vector2(3105, 89)
-texture = ExtResource("17_oeubc")
-
-[node name="Highwaytrans3" type="Sprite2D" parent="."]
-position = Vector2(3736, 89)
-texture = ExtResource("18_8rf3w")
-
-[node name="Highway5" type="Sprite2D" parent="."]
-position = Vector2(4324, 90)
-texture = ExtResource("19_cqytw")
-
-[node name="Highwaytrans4" type="Sprite2D" parent="."]
-position = Vector2(4963, 90)
-texture = ExtResource("20_wn1cs")
-
-[node name="Highwaytrans5" type="Sprite2D" parent="."]
-position = Vector2(5528, 91)
-texture = ExtResource("21_auuni")
-
-[node name="Highway6" type="Sprite2D" parent="."]
-position = Vector2(6148, 91)
-texture = ExtResource("22_6utqf")
-
 [node name="WinZone" type="Area2D" parent="."]
+position = Vector2(188, 109)
 
 [node name="WinCollision" type="CollisionShape2D" parent="WinZone" groups=["end_of_level"]]
 position = Vector2(6454, 89)
 shape = SubResource("RectangleShape2D_8tjnj")
+
+[node name="Car" parent="." instance=ExtResource("1_pc3bg")]
+z_index = 1
+position = Vector2(2, 115)
+
+[node name="Music" type="AudioStreamPlayer" parent="Car"]
+stream = ExtResource("9_11p2h")
+autoplay = true
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]
