@@ -2,6 +2,7 @@ extends Node2D
 
 func _ready():
 	WinOrLose.win = false
+	$CarAnimation.play("start")
 
 
 func _on_win_zone_body_entered(body):

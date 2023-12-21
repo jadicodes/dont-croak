@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=48 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
@@ -25,6 +25,13 @@
 [ext_resource type="PackedScene" uid="uid://babuc83gy0kmi" path="res://high_friction_area/high_friction_area.tscn" id="22_514iy"]
 [ext_resource type="PackedScene" uid="uid://bgxi8o4vjl76l" path="res://wheat/wheat.tscn" id="23_y8j8b"]
 [ext_resource type="PackedScene" uid="uid://coc328ylodku3" path="res://Moose/moose.tscn" id="25_vwnyg"]
+[ext_resource type="Texture2D" uid="uid://cjcvgc0bnnmu4" path="res://raw_assets/streetlights1.png" id="26_gi6ow"]
+[ext_resource type="Texture2D" uid="uid://slmuniyswk1v" path="res://raw_assets/streelamp1.png" id="27_usq45"]
+[ext_resource type="Texture2D" uid="uid://c3c0qckluptb2" path="res://raw_assets/overheadsign1.png" id="28_ovqgi"]
+[ext_resource type="Texture2D" uid="uid://c0e7nphj130mu" path="res://raw_assets/streensign1.png" id="29_vms70"]
+[ext_resource type="Texture2D" uid="uid://bvqwdw1n12aqw" path="res://raw_assets/constructionbarrier1.png" id="30_palyv"]
+[ext_resource type="Texture2D" uid="uid://tugopfkuo510" path="res://raw_assets/outmailbox1.png" id="31_agkgp"]
+[ext_resource type="Texture2D" uid="uid://brohrobphalqx" path="res://raw_assets/bench1.png" id="32_n3tth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
 size = Vector2(593, 28.25)
@@ -34,6 +41,70 @@ size = Vector2(713.914, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tjnj"]
 size = Vector2(5.25, 185)
+
+[sub_resource type="Animation" id="Animation_us1fd"]
+resource_name = "start"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.9, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(4, 116), Vector2(2, 116), Vector2(3, 116), Vector2(2, 116), Vector2(3, 116), Vector2(2, 116), Vector2(3, 116)]
+}
+
+[sub_resource type="Animation" id="Animation_67a8i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 116)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kp324"]
+_data = {
+"RESET": SubResource("Animation_67a8i"),
+"start": SubResource("Animation_us1fd")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r538n"]
+radius = 7.10938
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l6boi"]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ou5k"]
+size = Vector2(26, 26.2581)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1bgl"]
+size = Vector2(26, 27.4194)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8v1ii"]
+size = Vector2(7, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xia02"]
+size = Vector2(22.663, 53.2248)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urepd"]
+size = Vector2(17.6017, 48.0271)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7n5l"]
+size = Vector2(14, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nt3uy"]
+size = Vector2(48, 16)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_8lcnu")
@@ -72,22 +143,22 @@ texture = ExtResource("6_21hw7")
 
 [node name="Highway4" type="Sprite2D" parent="Highways"]
 z_index = -1
-position = Vector2(3105, 89)
+position = Vector2(3053, 89)
 texture = ExtResource("17_oeubc")
 
 [node name="Highwaytrans3" type="Sprite2D" parent="Highways"]
 z_index = -1
-position = Vector2(3736, 89)
+position = Vector2(3690, 89)
 texture = ExtResource("18_8rf3w")
 
 [node name="Highway5" type="Sprite2D" parent="Highways"]
 z_index = -1
-position = Vector2(4324, 90)
+position = Vector2(4277, 90)
 texture = ExtResource("19_cqytw")
 
 [node name="Highwaytrans4" type="Sprite2D" parent="Highways"]
 z_index = -1
-position = Vector2(4963, 90)
+position = Vector2(4917, 90)
 texture = ExtResource("20_wn1cs")
 
 [node name="Highwaytrans5" type="Sprite2D" parent="Highways"]
@@ -100,13 +171,57 @@ z_index = -1
 position = Vector2(6148, 90)
 texture = ExtResource("22_6utqf")
 
+[node name="Wheats" type="Node" parent="."]
+
+[node name="Wheat" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5858, 51)
+
+[node name="Wheat2" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5911, 92)
+
+[node name="Wheat3" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5952, 23)
+
+[node name="Wheat4" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5910, 115)
+
+[node name="Wheat5" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5992, 105)
+
+[node name="Wheat6" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6006, 63)
+
+[node name="Wheat7" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6022, 82)
+
+[node name="Wheat8" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6130, 44)
+
+[node name="Wheat9" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6081, 120)
+
+[node name="Wheat10" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6079, 98)
+
+[node name="Wheat11" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(6025, 28)
+
+[node name="Wheat12" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5897, 33)
+
+[node name="Wheat13" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5770, 118)
+
+[node name="Wheat14" parent="Wheats" instance=ExtResource("23_y8j8b")]
+position = Vector2(5792, 84)
+
 [node name="Frogs" type="Node" parent="."]
 
 [node name="Frog" parent="Frogs" instance=ExtResource("1_o6egk")]
 position = Vector2(66, 9)
 
 [node name="Frog2" parent="Frogs" instance=ExtResource("1_o6egk")]
-position = Vector2(112, 94)
+position = Vector2(117, 54)
 
 [node name="Frog3" parent="Frogs" instance=ExtResource("1_o6egk")]
 position = Vector2(284, 117)
@@ -179,57 +294,14 @@ position = Vector2(3141, 51)
 [node name="Turtle10" parent="Turtles" instance=ExtResource("15_6y8l0")]
 position = Vector2(3180, 121)
 
-[node name="Wheats" type="Node" parent="."]
-
-[node name="Wheat" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(5858, 51)
-
-[node name="Wheat2" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(5911, 92)
-
-[node name="Wheat3" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(5952, 23)
-
-[node name="Wheat4" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(5910, 115)
-
-[node name="Wheat5" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(5992, 105)
-
-[node name="Wheat6" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(6006, 63)
-
-[node name="Wheat7" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(6022, 82)
-
-[node name="Wheat8" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(6130, 44)
-
-[node name="Wheat9" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(6081, 120)
-
-[node name="Wheat10" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(6079, 98)
-
-[node name="Wheat11" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(6025, 28)
-
-[node name="Wheat12" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(5897, 33)
-
-[node name="Wheat13" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(5770, 118)
-
-[node name="Wheat14" parent="Wheats" instance=ExtResource("23_y8j8b")]
-position = Vector2(5792, 84)
-
 [node name="BadCars" type="Node" parent="."]
 
 [node name="BadCar" parent="BadCars" instance=ExtResource("3_hbyjk")]
 position = Vector2(598, -8)
 
 [node name="BadCar2" parent="BadCars" instance=ExtResource("3_hbyjk")]
-position = Vector2(630, 90)
+z_index = 1
+position = Vector2(632, 113)
 collision_mask = 15
 
 [node name="BadCar3" parent="BadCars" instance=ExtResource("3_hbyjk")]
@@ -237,11 +309,11 @@ position = Vector2(665, 140)
 collision_mask = 15
 
 [node name="BadCar4" parent="BadCars" instance=ExtResource("3_hbyjk")]
-position = Vector2(3756, 158)
+position = Vector2(3710, 158)
 collision_mask = 15
 
 [node name="BadCar5" parent="BadCars" instance=ExtResource("3_hbyjk")]
-position = Vector2(3781, 45)
+position = Vector2(3736, 45)
 collision_mask = 15
 
 [node name="BadCar6" parent="BadCars" instance=ExtResource("3_hbyjk")]
@@ -267,6 +339,115 @@ position = Vector2(143, 91)
 
 [node name="Tree6" parent="Trees" instance=ExtResource("4_8gpkm")]
 position = Vector2(329, 69)
+
+[node name="Tree7" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(826, 92)
+
+[node name="Tree8" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(967, 66)
+
+[node name="Tree9" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(1076, 91)
+
+[node name="Tree10" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(1521, 6)
+
+[node name="Tree11" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(1642, 159)
+
+[node name="Tree12" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(1767, 21)
+
+[node name="Tree13" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(2115, 5)
+
+[node name="Tree14" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(1971, 160)
+
+[node name="Tree15" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(2488, 23)
+
+[node name="Tree16" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(2375, 148)
+
+[node name="Tree17" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(2867, 138)
+
+[node name="Tree18" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(3049, 18)
+
+[node name="Tree19" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(3372, 133)
+
+[node name="Tree20" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(3314, 23)
+
+[node name="Tree21" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(3635, 148)
+
+[node name="Tree22" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(3952, 10)
+
+[node name="Tree23" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(4025, 21)
+
+[node name="Tree24" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(4115, 150)
+
+[node name="Tree25" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(4228, 33)
+
+[node name="Tree26" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(4511, 141)
+
+[node name="Tree27" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5000, 39)
+
+[node name="Tree28" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5297, 160)
+
+[node name="Tree29" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5326, 124)
+
+[node name="Tree30" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5482, 26)
+rotation = -1.34362
+
+[node name="Tree31" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5562, 162)
+rotation = -1.34362
+
+[node name="Tree32" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5668, 40)
+rotation = -1.34362
+
+[node name="Tree33" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5686, 117)
+rotation = -1.34362
+
+[node name="Tree34" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5668, 154)
+rotation = -1.34362
+
+[node name="Tree35" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5624, 128)
+rotation = -1.34362
+
+[node name="Tree36" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5609, 150)
+rotation = -1.34362
+
+[node name="Tree37" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5548, 36)
+rotation = -0.261799
+
+[node name="Tree39" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5234, 29)
+rotation = -0.261799
+
+[node name="Tree38" parent="Trees" instance=ExtResource("4_8gpkm")]
+position = Vector2(5384, 159)
+rotation = -1.57079
 
 [node name="Boundaries" type="StaticBody2D" parent="."]
 position = Vector2(575, 640)
@@ -377,7 +558,7 @@ position = Vector2(1922, 68)
 position = Vector2(3278, 66)
 
 [node name="HorizontalBadCar7" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
-position = Vector2(3313, 66)
+position = Vector2(3437, 66)
 
 [node name="HorizontalBadCar8" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
 position = Vector2(4119, 67)
@@ -398,8 +579,7 @@ position = Vector2(4308, 100)
 position = Vector2(893, 45)
 
 [node name="HorizontalBadCar3" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
-position = Vector2(469, 141)
-rotation = 3.14159
+position = Vector2(512, 46)
 
 [node name="HorizontalBadCar4" parent="." instance=ExtResource("8_lhnrb")]
 position = Vector2(209, 143)
@@ -408,43 +588,51 @@ scale = Vector2(1.00137, 1)
 [node name="LongCar" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
 position = Vector2(6, 144)
 SPEED = 48
+ySpeed = -1
 
 [node name="LongCar2" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
 position = Vector2(734, 143)
 scale = Vector2(1.00137, 1)
 SPEED = 120
+ySpeed = 0
 
 [node name="LongCar3" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
-position = Vector2(919, 115)
+position = Vector2(918, 121)
 scale = Vector2(1.00137, 1)
+ySpeed = 0
 
 [node name="LongCar4" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
 position = Vector2(1111, 36)
 rotation = 3.14159
 scale = Vector2(1.00137, 1)
 SPEED = -80
+ySpeed = 30
 
 [node name="LongCar5" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
 position = Vector2(2573, 83)
 rotation = 3.14159
 scale = Vector2(1.00137, 1)
-SPEED = -80
+SPEED = -150
+ySpeed = 4
 
 [node name="LongCar6" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
 position = Vector2(2640, 83)
 rotation = 3.14159
 scale = Vector2(1.00137, 1)
 SPEED = -80
+ySpeed = 0
 
 [node name="LongCar7" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
 position = Vector2(2787, 90)
 scale = Vector2(1.00137, 1)
 SPEED = 70
+ySpeed = 4
 
 [node name="LongCar8" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
 position = Vector2(3229, 93)
 scale = Vector2(1.00137, 1)
 SPEED = 70
+ySpeed = 0
 
 [node name="Barrier" parent="." groups=["deadly_obstacles"] instance=ExtResource("12_m7th1")]
 position = Vector2(1155, 64)
@@ -456,9 +644,15 @@ position = Vector2(188, 109)
 position = Vector2(5951, -19)
 shape = SubResource("RectangleShape2D_8tjnj")
 
+[node name="CarAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Car")
+libraries = {
+"": SubResource("AnimationLibrary_kp324")
+}
+
 [node name="Car" parent="." instance=ExtResource("1_pc3bg")]
-z_index = 1
-position = Vector2(5, 116)
+z_index = 5
+position = Vector2(4, 116)
 
 [node name="Music" type="AudioStreamPlayer" parent="Car"]
 stream = ExtResource("9_11p2h")
@@ -482,18 +676,18 @@ position = Vector2(6137, 4)
 [node name="Moose" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
 position = Vector2(4621, 12)
 SPEED = 0
-ySpeed = 10
+ySpeed = 20
 
 [node name="Moose6" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
 position = Vector2(3594, 65)
 rotation = -1.5708
 SPEED = 10
-ySpeed = -1
+ySpeed = -2
 
 [node name="Moose2" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
 position = Vector2(4312, 11)
 SPEED = 0
-ySpeed = 10
+ySpeed = 15
 
 [node name="Moose3" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
 position = Vector2(4891, 46)
@@ -507,7 +701,196 @@ ySpeed = 10
 
 [node name="Moose5" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
 position = Vector2(5502, 118)
+rotation = 3.14159
 SPEED = 0
-ySpeed = 10
+ySpeed = -10
+
+[node name="streetlight_sb" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+z_index = 5
+position = Vector2(639, 89)
+scale = Vector2(0.984615, 0.988889)
+
+[node name="Streetlights1" type="Sprite2D" parent="streetlight_sb" groups=["deadly_obstacles"]]
+scale = Vector2(1, 1)
+texture = ExtResource("26_gi6ow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="streetlight_sb"]
+position = Vector2(-57.8906, -82.9213)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_r538n")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="streetlight_sb"]
+position = Vector2(57.8906, -82.9213)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_r538n")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="streetlight_sb"]
+position = Vector2(57.8906, 82.9213)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_r538n")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="streetlight_sb"]
+position = Vector2(-57.8906, 82.9213)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_r538n")
+
+[node name="Streetlamp1_sd" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+position = Vector2(248, 24)
+
+[node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd"]
+texture = ExtResource("27_usq45")
+
+[node name="streetlamp1_cs" type="CollisionShape2D" parent="Streetlamp1_sd" groups=["deadly_obstacles"]]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_l6boi")
+
+[node name="Streetlamp1_sd2" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+position = Vector2(248, 24)
+
+[node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd2"]
+position = Vector2(256, 0)
+texture = ExtResource("27_usq45")
+
+[node name="streetlamp1_cs" type="CollisionShape2D" parent="Streetlamp1_sd2" groups=["deadly_obstacles"]]
+position = Vector2(256, -16)
+shape = SubResource("CircleShape2D_l6boi")
+
+[node name="Streetlamp1_sd3" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+position = Vector2(776, 25)
+
+[node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd3"]
+texture = ExtResource("27_usq45")
+
+[node name="streetlamp1_cs" type="CollisionShape2D" parent="Streetlamp1_sd3" groups=["deadly_obstacles"]]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_l6boi")
+
+[node name="Streetlamp1_sd4" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+position = Vector2(776, 25)
+
+[node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd4"]
+position = Vector2(256, 0)
+texture = ExtResource("27_usq45")
+
+[node name="streetlamp1_cs" type="CollisionShape2D" parent="Streetlamp1_sd4" groups=["deadly_obstacles"]]
+position = Vector2(256, -16)
+shape = SubResource("CircleShape2D_l6boi")
+
+[node name="Streetlamp1_sd5" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+position = Vector2(248, 189)
+
+[node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd5"]
+position = Vector2(0, -32)
+rotation = 3.14159
+texture = ExtResource("27_usq45")
+
+[node name="streetlamp1_cs" type="CollisionShape2D" parent="Streetlamp1_sd5" groups=["deadly_obstacles"]]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_l6boi")
+
+[node name="Streetlamp1_sd6" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+position = Vector2(248, 189)
+
+[node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd6"]
+position = Vector2(256, -32)
+rotation = 3.14159
+texture = ExtResource("27_usq45")
+
+[node name="streetlamp1_cs" type="CollisionShape2D" parent="Streetlamp1_sd6" groups=["deadly_obstacles"]]
+position = Vector2(256, -16)
+shape = SubResource("CircleShape2D_l6boi")
+
+[node name="Streetlamp1_sd7" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+position = Vector2(776, 190)
+
+[node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd7"]
+position = Vector2(0, -32)
+rotation = 3.14159
+texture = ExtResource("27_usq45")
+
+[node name="streetlamp1_cs" type="CollisionShape2D" parent="Streetlamp1_sd7" groups=["deadly_obstacles"]]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_l6boi")
+
+[node name="Streetlamp1_sd8" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+position = Vector2(776, 190)
+
+[node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd8"]
+position = Vector2(256, -32)
+rotation = 3.14159
+texture = ExtResource("27_usq45")
+
+[node name="streetlamp1_cs" type="CollisionShape2D" parent="Streetlamp1_sd8" groups=["deadly_obstacles"]]
+position = Vector2(256, -16)
+shape = SubResource("CircleShape2D_l6boi")
+
+[node name="Overheadsign1_sb" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+
+[node name="Overheadsign1" type="Sprite2D" parent="Overheadsign1_sb"]
+position = Vector2(1957, 93)
+scale = Vector2(1, 0.861111)
+texture = ExtResource("28_ovqgi")
+
+[node name="Overheadsign_cs1" type="CollisionShape2D" parent="Overheadsign1_sb" groups=["deadly_obstacles"]]
+position = Vector2(1957, 159.694)
+scale = Vector2(1, 0.861111)
+shape = SubResource("RectangleShape2D_2ou5k")
+
+[node name="Overheadsign_cs2" type="CollisionShape2D" parent="Overheadsign1_sb" groups=["deadly_obstacles"]]
+position = Vector2(1957, 27.1944)
+scale = Vector2(1, 0.861111)
+shape = SubResource("RectangleShape2D_e1bgl")
+
+[node name="Streetsign1_sb" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+
+[node name="Streensign1" type="Sprite2D" parent="Streetsign1_sb"]
+position = Vector2(3545, 146)
+texture = ExtResource("29_vms70")
+
+[node name="Streetsign1_cs" type="CollisionShape2D" parent="Streetsign1_sb" groups=["deadly_obstacles"]]
+position = Vector2(3540.5, 146)
+shape = SubResource("RectangleShape2D_8v1ii")
+
+[node name="constructionbarrier_sb" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+
+[node name="Constructionbarrier1" type="Sprite2D" parent="constructionbarrier_sb"]
+position = Vector2(5077, 12.9999)
+rotation = -1.31598
+texture = ExtResource("30_palyv")
+
+[node name="Constructionbarrier2" type="Sprite2D" parent="constructionbarrier_sb"]
+position = Vector2(5124, 12)
+rotation = -1.91463
+texture = ExtResource("30_palyv")
+
+[node name="constructionbarrier1_cs" type="CollisionShape2D" parent="constructionbarrier_sb" groups=["deadly_obstacles"]]
+position = Vector2(5080.39, 10.2576)
+rotation = -1.31598
+shape = SubResource("RectangleShape2D_xia02")
+
+[node name="constructionbarrier2_cs" type="CollisionShape2D" parent="constructionbarrier_sb" groups=["deadly_obstacles"]]
+position = Vector2(5123.34, 10.9611)
+rotation = -1.91463
+shape = SubResource("RectangleShape2D_urepd")
+
+[node name="Outmailbox1_sbn" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+
+[node name="Outmailbox1" type="Sprite2D" parent="Outmailbox1_sbn"]
+position = Vector2(920, 9)
+texture = ExtResource("31_agkgp")
+
+[node name="Outmailbox1_cs" type="CollisionShape2D" parent="Outmailbox1_sbn" groups=["deadly_obstacles"]]
+position = Vector2(920, 9.5)
+shape = SubResource("RectangleShape2D_w7n5l")
+
+[node name="Bench1_sb" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+position = Vector2(434, 172)
+rotation = -3.14159
+
+[node name="Bench1" type="Sprite2D" parent="Bench1_sb"]
+texture = ExtResource("32_n3tth")
+
+[node name="Bench1_cs" type="CollisionShape2D" parent="Bench1_sb" groups=["deadly_obstacles"]]
+shape = SubResource("RectangleShape2D_nt3uy")
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]

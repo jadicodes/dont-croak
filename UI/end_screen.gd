@@ -8,7 +8,7 @@ func _ready():
 		$WinLoseLabel.text = "You win!"
 	else:
 		SFX.play_crash()
-		$WinLoseLabel.text = "Get rekt"
+		$WinLoseLabel.text = "YOU CROAKED!"
 
 
 func _on_button_pressed():

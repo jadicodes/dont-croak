@@ -20,6 +20,7 @@ func _physics_process(_delta):
 		if collided:
 			velocity.y *= -1
 			turtle_sprite.flip_v = !turtle_sprite.flip_v
+			turt_sprite.flip_v = !turt_sprite.flip_v
 		
 		
 func _on_area_2d_body_entered(body):
