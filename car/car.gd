@@ -3,7 +3,6 @@ extends CharacterBody2D
 
 @onready var animation_player := $AnimationPlayer
 
-const SPEED = 50.0
 var can_move = false
 
 
@@ -18,11 +17,11 @@ func _physics_process(delta):
 		if Input.is_action_pressed("move_down"):
 			direction.y += 1
 
-		move_and_collide(direction * SPEED * delta)
+		move_and_collide(direction * Speed.speed * delta)
 	else:
 		animation_player.play("shake")
 	
-	move_and_collide(direction * SPEED * delta)
+	move_and_collide(direction * Speed.speed * delta)
 
 
 func _on_start_timer_timeout():
@@ -32,7 +31,13 @@ func _on_start_timer_timeout():
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("deadly_obstacles"):
 		die()
+	if body.is_in_group("friction"):
+		slow()
 
 
 func die():
 	get_tree().change_scene_to_file("res://UI/end_screen.tscn")
+
+
+func slow():
+	Speed.speed -= 25

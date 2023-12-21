@@ -16,3 +16,7 @@ func play_croak() -> void:
 
 func play_siren() -> void:
 	$Police.play()
+
+
+func play_thud() -> void:
+	$Thud.play()

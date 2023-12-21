@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://k713iuykpric"]
+[gd_scene load_steps=7 format=3 uid="uid://k713iuykpric"]
 
 [ext_resource type="Script" path="res://common/sfx.gd" id="1_kpl0g"]
 [ext_resource type="AudioStream" uid="uid://bvredwindhet0" path="res://raw_assets/squish.wav" id="2_droke"]
 [ext_resource type="AudioStream" uid="uid://ollbc5gdjjks" path="res://raw_assets/crash.wav" id="3_05qoy"]
 [ext_resource type="AudioStream" uid="uid://cmpl78tqjfkd7" path="res://raw_assets/croak.wav" id="4_smk84"]
 [ext_resource type="AudioStream" uid="uid://c00d6b5knp3vx" path="res://raw_assets/police.wav" id="5_02mr7"]
+[ext_resource type="AudioStream" uid="uid://bmly7l5tuat" path="res://raw_assets/thud.wav" id="6_5ye11"]
 
 [node name="SFX" type="Node"]
 script = ExtResource("1_kpl0g")
@@ -20,5 +21,9 @@ stream = ExtResource("4_smk84")
 
 [node name="Police" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_02mr7")
+
+[node name="Thud" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5ye11")
+volume_db = -5.0
 
 [connection signal="finished" from="Croak" to="." method="_on_croak_finished"]

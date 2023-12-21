@@ -13,3 +13,9 @@ res://frog/frog.tscn
 res://turtle/turtle.gd
 res://wheat/wheat.tscn
 res://wheat/wheat.gd
+res://police_car/police_car.gd
+res://high_friction_area/high_friction_area.tscn
+res://car/car.gd
+res://common/speed.gd
+res://high_friction_area/high_friction_area.gd
+res://car/car.tscn

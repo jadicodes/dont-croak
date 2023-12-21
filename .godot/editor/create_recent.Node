@@ -1,8 +1,8 @@
-AudioStreamPlayer
-Node
-CanvasLayer
-CollisionShape2D
 Area2D
+CollisionShape2D
+Node
+AudioStreamPlayer
+CanvasLayer
 StaticBody2D
 RigidBody2D
 AudioStreamPlayer2D

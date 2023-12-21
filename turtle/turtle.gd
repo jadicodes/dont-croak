@@ -41,6 +41,7 @@ func die():
 
 func turt():
 	$CollisionShape2D.set_deferred("disabled",true)
+	SFX.play_thud()
 	turtle_sprite.visible = false
 	turt_sprite.visible = true
 	turted = true 
