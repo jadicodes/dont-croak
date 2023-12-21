@@ -23,3 +23,9 @@ shape = SubResource("RectangleShape2D_7cwtr")
 [node name="OffScreenNotifier" parent="." instance=ExtResource("3_3x6or")]
 position = Vector2(23, 8)
 scale = Vector2(2.70942, 0.841256)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(25, 8)
+scale = Vector2(2.5, 0.85)
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

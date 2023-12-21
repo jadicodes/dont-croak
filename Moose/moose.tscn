@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://coc328ylodku3"]
+
+[ext_resource type="Script" path="res://Moose/moose.gd" id="1_6capr"]
+[ext_resource type="Texture2D" uid="uid://cn6ifb5v7twh7" path="res://raw_assets/moose1.png" id="1_cb25f"]
+[ext_resource type="PackedScene" uid="uid://cdn6g5k0xjis7" path="res://common/off_screen_notifier.tscn" id="2_w1c3u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gevtc"]
+size = Vector2(30, 32)
+
+[node name="Moose" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_6capr")
+
+[node name="Moose1" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("1_cb25f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_gevtc")
+
+[node name="OffScreenNotifier" parent="." instance=ExtResource("2_w1c3u")]
+position = Vector2(15, 10)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(16, 16)
+scale = Vector2(1.5, 1.6)
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]

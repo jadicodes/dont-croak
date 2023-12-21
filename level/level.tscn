@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=29 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://c8mp3qtlyp56n" path="res://raw_assets/highway6.png" id="22_6utqf"]
 [ext_resource type="PackedScene" uid="uid://babuc83gy0kmi" path="res://high_friction_area/high_friction_area.tscn" id="22_514iy"]
 [ext_resource type="PackedScene" uid="uid://bgxi8o4vjl76l" path="res://wheat/wheat.tscn" id="23_y8j8b"]
+[ext_resource type="PackedScene" uid="uid://coc328ylodku3" path="res://Moose/moose.tscn" id="25_vwnyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
 size = Vector2(593, 28.25)
@@ -102,7 +103,7 @@ texture = ExtResource("22_6utqf")
 [node name="Frogs" type="Node" parent="."]
 
 [node name="Frog" parent="Frogs" instance=ExtResource("1_o6egk")]
-position = Vector2(66, 41)
+position = Vector2(66, 9)
 
 [node name="Frog2" parent="Frogs" instance=ExtResource("1_o6egk")]
 position = Vector2(112, 94)
@@ -121,6 +122,30 @@ position = Vector2(1048, 86)
 
 [node name="Frog7" parent="Frogs" instance=ExtResource("1_o6egk")]
 position = Vector2(1891, 115)
+
+[node name="Frog8" parent="Frogs" instance=ExtResource("1_o6egk")]
+position = Vector2(2784, 123)
+
+[node name="Frog9" parent="Frogs" instance=ExtResource("1_o6egk")]
+position = Vector2(3212, 41)
+
+[node name="Frog14" parent="Frogs" instance=ExtResource("1_o6egk")]
+position = Vector2(3263, 138)
+
+[node name="Frog15" parent="Frogs" instance=ExtResource("1_o6egk")]
+position = Vector2(3042, 155)
+
+[node name="Frog10" parent="Frogs" instance=ExtResource("1_o6egk")]
+position = Vector2(4161, 150)
+
+[node name="Frog11" parent="Frogs" instance=ExtResource("1_o6egk")]
+position = Vector2(4187, 131)
+
+[node name="Frog12" parent="Frogs" instance=ExtResource("1_o6egk")]
+position = Vector2(4591, 150)
+
+[node name="Frog13" parent="Frogs" instance=ExtResource("1_o6egk")]
+position = Vector2(4943, 42)
 
 [node name="Turtles" type="Node" parent="."]
 
@@ -141,6 +166,18 @@ position = Vector2(2058, 19)
 
 [node name="Turtle6" parent="Turtles" instance=ExtResource("15_6y8l0")]
 position = Vector2(2161, 134)
+
+[node name="Turtle7" parent="Turtles" instance=ExtResource("15_6y8l0")]
+position = Vector2(2742, 41)
+
+[node name="Turtle8" parent="Turtles" instance=ExtResource("15_6y8l0")]
+position = Vector2(3079, 131)
+
+[node name="Turtle9" parent="Turtles" instance=ExtResource("15_6y8l0")]
+position = Vector2(3141, 51)
+
+[node name="Turtle10" parent="Turtles" instance=ExtResource("15_6y8l0")]
+position = Vector2(3180, 121)
 
 [node name="Wheats" type="Node" parent="."]
 
@@ -326,16 +363,88 @@ shape = SubResource("RectangleShape2D_kimnb")
 position = Vector2(1164, 87)
 
 [node name="PoliceCar2" parent="." groups=["deadly_obstacles"] instance=ExtResource("16_f5hir")]
-position = Vector2(1410, 24)
+position = Vector2(1787, 61)
+rotation = 3.14159
+SPEED = -100
 
 [node name="HorizontalBadCar" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
 position = Vector2(390, 21)
 
+[node name="HorizontalBadCar5" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(1922, 68)
+
+[node name="HorizontalBadCar6" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(3278, 66)
+
+[node name="HorizontalBadCar7" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(3313, 66)
+
+[node name="HorizontalBadCar8" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(4119, 67)
+
+[node name="HorizontalBadCar9" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(4740, 96)
+
+[node name="HorizontalBadCar10" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(4832, 80)
+
+[node name="HorizontalBadCar11" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(4463, 73)
+
+[node name="HorizontalBadCar12" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(4308, 100)
+
 [node name="HorizontalBadCar2" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
 position = Vector2(893, 45)
 
+[node name="HorizontalBadCar3" parent="." groups=["deadly_obstacles"] instance=ExtResource("8_lhnrb")]
+position = Vector2(469, 141)
+rotation = 3.14159
+
+[node name="HorizontalBadCar4" parent="." instance=ExtResource("8_lhnrb")]
+position = Vector2(209, 143)
+scale = Vector2(1.00137, 1)
+
 [node name="LongCar" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
-position = Vector2(-97, 144)
+position = Vector2(6, 144)
+SPEED = 48
+
+[node name="LongCar2" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
+position = Vector2(734, 143)
+scale = Vector2(1.00137, 1)
+SPEED = 120
+
+[node name="LongCar3" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
+position = Vector2(919, 115)
+scale = Vector2(1.00137, 1)
+
+[node name="LongCar4" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
+position = Vector2(1111, 36)
+rotation = 3.14159
+scale = Vector2(1.00137, 1)
+SPEED = -80
+
+[node name="LongCar5" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
+position = Vector2(2573, 83)
+rotation = 3.14159
+scale = Vector2(1.00137, 1)
+SPEED = -80
+
+[node name="LongCar6" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
+position = Vector2(2640, 83)
+rotation = 3.14159
+scale = Vector2(1.00137, 1)
+SPEED = -80
+
+[node name="LongCar7" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
+position = Vector2(2787, 90)
+scale = Vector2(1.00137, 1)
+SPEED = 70
+
+[node name="LongCar8" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
+position = Vector2(3229, 93)
+scale = Vector2(1.00137, 1)
+SPEED = 70
 
 [node name="Barrier" parent="." groups=["deadly_obstacles"] instance=ExtResource("12_m7th1")]
 position = Vector2(1155, 64)
@@ -369,5 +478,36 @@ position = Vector2(6022, 1)
 
 [node name="HighFrictionArea5" parent="." instance=ExtResource("22_514iy")]
 position = Vector2(6137, 4)
+
+[node name="Moose" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
+position = Vector2(4621, 12)
+SPEED = 0
+ySpeed = 10
+
+[node name="Moose6" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
+position = Vector2(3594, 65)
+rotation = -1.5708
+SPEED = 10
+ySpeed = -1
+
+[node name="Moose2" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
+position = Vector2(4312, 11)
+SPEED = 0
+ySpeed = 10
+
+[node name="Moose3" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
+position = Vector2(4891, 46)
+SPEED = 0
+ySpeed = 10
+
+[node name="Moose4" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
+position = Vector2(5375, 32)
+SPEED = 0
+ySpeed = 10
+
+[node name="Moose5" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("25_vwnyg")]
+position = Vector2(5502, 118)
+SPEED = 0
+ySpeed = 10
 
 [connection signal="body_entered" from="WinZone" to="." method="_on_win_zone_body_entered"]

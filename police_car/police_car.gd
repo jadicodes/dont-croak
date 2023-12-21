@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
+@export var SPEED = 85
 
 @onready var police_sprite := $PoliceCarSprite
 var can_move = false
-const SPEED = 85
- 
+
+
 func _physics_process(_delta):
 	if can_move == true:
 		velocity = Vector2(SPEED, 1)

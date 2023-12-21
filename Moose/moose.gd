@@ -5,10 +5,6 @@ extends CharacterBody2D
 @export var ySpeed = 80
 var can_move = false
 
-func _ready():
-	velocity = Vector2(SPEED, ySpeed)
-
-
 func _physics_process(_delta):
 	if can_move == true:
 		velocity = Vector2(SPEED, ySpeed)

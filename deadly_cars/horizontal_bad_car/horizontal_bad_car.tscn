@@ -1,14 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd5vcwaesqoo0"]
+[gd_scene load_steps=7 format=3 uid="uid://bd5vcwaesqoo0"]
 
 [ext_resource type="Script" path="res://deadly_cars/horizontal_bad_car/horizontal_bad_car.gd" id="1_mk6ca"]
 [ext_resource type="Texture2D" uid="uid://n5boal56v4bn" path="res://raw_assets/car4.png" id="2_b6o24"]
+[ext_resource type="PackedScene" uid="uid://bwvmov62y5hi0" path="res://common/splat.tscn" id="2_ft3am"]
+[ext_resource type="PackedScene" uid="uid://cdn6g5k0xjis7" path="res://common/off_screen_notifier.tscn" id="4_41quo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g055q"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8puxf"]
+size = Vector2(18, 18)
+
 [node name="HorizontalBadCar" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_mk6ca")
+
+[node name="Splat" parent="." instance=ExtResource("2_ft3am")]
+position = Vector2(8, 8)
 
 [node name="SpriteHorizontalBadCar" type="Sprite2D" parent="."]
 position = Vector2(8, 8)
@@ -18,3 +26,18 @@ texture = ExtResource("2_b6o24")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_g055q")
+
+[node name="OnScreenNotifier" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(8, 8)
+
+[node name="OffScreenNotifier" parent="." instance=ExtResource("4_41quo")]
+position = Vector2(8, 8)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_8puxf")
+
+[connection signal="screen_entered" from="OnScreenNotifier" to="." method="_on_on_screen_notifier_screen_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
