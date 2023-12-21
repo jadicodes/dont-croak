@@ -13,3 +13,6 @@ res://Moose/moose.tscn
 res://UI/end_screen.tscn
 res://turtle/turtle.tscn
 res://level/level.gd
+res://Barrier/breakable_barrier.tscn
+res://Barrier/breakable_barrier.gd
+res://common/speed.gd

@@ -2,6 +2,7 @@ extends Node2D
 
 func _ready():
 	WinOrLose.win = false
+	Speed.set_speed()
 	$CarAnimation.play("start")
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://crldqx2l6jjpk"]
+[gd_scene load_steps=49 format=3 uid="uid://crldqx2l6jjpk"]
 
 [ext_resource type="Script" path="res://level/level.gd" id="1_8lcnu"]
 [ext_resource type="PackedScene" uid="uid://br25er0khgry7" path="res://frog/frog.tscn" id="1_o6egk"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://c0e7nphj130mu" path="res://raw_assets/streensign1.png" id="29_vms70"]
 [ext_resource type="Texture2D" uid="uid://bvqwdw1n12aqw" path="res://raw_assets/constructionbarrier1.png" id="30_palyv"]
 [ext_resource type="Texture2D" uid="uid://tugopfkuo510" path="res://raw_assets/outmailbox1.png" id="31_agkgp"]
+[ext_resource type="PackedScene" uid="uid://c1f16huaet0vg" path="res://Barrier/breakable_barrier.tscn" id="32_kqecf"]
 [ext_resource type="Texture2D" uid="uid://brohrobphalqx" path="res://raw_assets/bench1.png" id="32_n3tth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgmbe"]
@@ -582,7 +583,7 @@ position = Vector2(893, 45)
 position = Vector2(512, 46)
 
 [node name="HorizontalBadCar4" parent="." instance=ExtResource("8_lhnrb")]
-position = Vector2(209, 143)
+position = Vector2(300, 144)
 scale = Vector2(1.00137, 1)
 
 [node name="LongCar" parent="." groups=["deadly_obstacles", "very_deadly_obstacles"] instance=ExtResource("10_u5stc")]
@@ -738,6 +739,7 @@ shape = SubResource("CircleShape2D_r538n")
 position = Vector2(248, 24)
 
 [node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd"]
+z_index = 8
 texture = ExtResource("27_usq45")
 
 [node name="streetlamp1_cs" type="CollisionShape2D" parent="Streetlamp1_sd" groups=["deadly_obstacles"]]
@@ -745,9 +747,11 @@ position = Vector2(0, -16)
 shape = SubResource("CircleShape2D_l6boi")
 
 [node name="Streetlamp1_sd2" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
+z_index = 5
 position = Vector2(248, 24)
 
 [node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd2"]
+z_index = 8
 position = Vector2(256, 0)
 texture = ExtResource("27_usq45")
 
@@ -759,6 +763,7 @@ shape = SubResource("CircleShape2D_l6boi")
 position = Vector2(776, 25)
 
 [node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd3"]
+z_index = 8
 texture = ExtResource("27_usq45")
 
 [node name="streetlamp1_cs" type="CollisionShape2D" parent="Streetlamp1_sd3" groups=["deadly_obstacles"]]
@@ -769,6 +774,7 @@ shape = SubResource("CircleShape2D_l6boi")
 position = Vector2(776, 25)
 
 [node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd4"]
+z_index = 8
 position = Vector2(256, 0)
 texture = ExtResource("27_usq45")
 
@@ -780,6 +786,7 @@ shape = SubResource("CircleShape2D_l6boi")
 position = Vector2(248, 189)
 
 [node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd5"]
+z_index = 8
 position = Vector2(0, -32)
 rotation = 3.14159
 texture = ExtResource("27_usq45")
@@ -792,6 +799,7 @@ shape = SubResource("CircleShape2D_l6boi")
 position = Vector2(248, 189)
 
 [node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd6"]
+z_index = 8
 position = Vector2(256, -32)
 rotation = 3.14159
 texture = ExtResource("27_usq45")
@@ -804,6 +812,7 @@ shape = SubResource("CircleShape2D_l6boi")
 position = Vector2(776, 190)
 
 [node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd7"]
+z_index = 8
 position = Vector2(0, -32)
 rotation = 3.14159
 texture = ExtResource("27_usq45")
@@ -816,6 +825,7 @@ shape = SubResource("CircleShape2D_l6boi")
 position = Vector2(776, 190)
 
 [node name="Streelamp1" type="Sprite2D" parent="Streetlamp1_sd8"]
+z_index = 8
 position = Vector2(256, -32)
 rotation = 3.14159
 texture = ExtResource("27_usq45")
@@ -827,6 +837,7 @@ shape = SubResource("CircleShape2D_l6boi")
 [node name="Overheadsign1_sb" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
 
 [node name="Overheadsign1" type="Sprite2D" parent="Overheadsign1_sb"]
+z_index = 8
 position = Vector2(1957, 93)
 scale = Vector2(1, 0.861111)
 texture = ExtResource("28_ovqgi")
@@ -882,6 +893,24 @@ texture = ExtResource("31_agkgp")
 [node name="Outmailbox1_cs" type="CollisionShape2D" parent="Outmailbox1_sbn" groups=["deadly_obstacles"]]
 position = Vector2(920, 9.5)
 shape = SubResource("RectangleShape2D_w7n5l")
+
+[node name="BreakableBarrier" parent="." instance=ExtResource("32_kqecf")]
+position = Vector2(4018, 99)
+
+[node name="BreakableBarrier2" parent="." instance=ExtResource("32_kqecf")]
+position = Vector2(4018, 70)
+
+[node name="BreakableBarrier3" parent="." instance=ExtResource("32_kqecf")]
+position = Vector2(4861, 122)
+
+[node name="BreakableBarrier4" parent="." instance=ExtResource("32_kqecf")]
+position = Vector2(4860, 106)
+
+[node name="BreakableBarrier5" parent="." instance=ExtResource("32_kqecf")]
+position = Vector2(4860, 89)
+
+[node name="BreakableBarrier6" parent="." instance=ExtResource("32_kqecf")]
+position = Vector2(4860, 71)
 
 [node name="Bench1_sb" type="StaticBody2D" parent="." groups=["deadly_obstacles"]]
 position = Vector2(434, 172)
