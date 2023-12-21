@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@onready var animation_player := $AnimationPlayer
+#@onready var animation_player := $AnimationPlayer
 
 var can_move = false
 
@@ -9,7 +9,7 @@ var can_move = false
 func _physics_process(delta):
 	var direction := Vector2(0,0)
 	if can_move == true:
-		animation_player.stop()
+#		animation_player.stop()
 		direction = Vector2(1,0)
 		
 		if Input.is_action_pressed("move_up"):
@@ -18,8 +18,8 @@ func _physics_process(delta):
 			direction.y += 1
 
 		move_and_collide(direction * Speed.speed * delta)
-	else:
-		animation_player.play("shake")
+#	else:
+#		animation_player.play("shake")
 	
 	move_and_collide(direction * Speed.speed * delta)
 

@@ -36,4 +36,9 @@ position = Vector2(8, 8)
 [node name="OffScreenNotifier" parent="." instance=ExtResource("4_ky43d")]
 position = Vector2(9, 9)
 
+[node name="OnScreenNotifier" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(8.5, 8.5)
+scale = Vector2(0.95, 0.95)
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="screen_entered" from="OnScreenNotifier" to="." method="_on_on_screen_notifier_screen_entered"]

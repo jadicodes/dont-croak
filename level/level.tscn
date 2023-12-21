@@ -349,7 +349,7 @@ shape = SubResource("RectangleShape2D_8tjnj")
 
 [node name="Car" parent="." instance=ExtResource("1_pc3bg")]
 z_index = 1
-position = Vector2(5387, 81)
+position = Vector2(5, 116)
 
 [node name="Music" type="AudioStreamPlayer" parent="Car"]
 stream = ExtResource("9_11p2h")

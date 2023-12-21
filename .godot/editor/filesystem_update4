@@ -19,3 +19,5 @@ res://car/car.gd
 res://common/speed.gd
 res://high_friction_area/high_friction_area.gd
 res://car/car.tscn
+res://deadly_cars/bad_car/bad_car.gd
+res://deadly_cars/bad_car/bad_car.tscn
